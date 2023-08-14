@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "esbuild --watch --serve --outfile=./dev/.cache/basecoat.css --bundle --servedir=./dev basecoat.css",
+    "build:bundle": "esbuild --bundle --outfile=dist/basecoat.css basecoat.css",
+    "build:min": "esbuild --bundle --minify --outdir=dist/basecoat.min.css basecoat.css",
+    "build": "pnpm run build:bundle && pnpm run build:min"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.3"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
+  }
+}
