@@ -1,0 +1,25 @@
+@layer core {
+  body {
+    font-family: var(--bc-font-family, var(--bc-default-font-family)); 
+    font-size: var(--bc-font-size, var(--bc-default-font-size));
+    color: var(--bc-black, var(--bc-default-black));
+    background-color: var(--bc-white, var(--bc-default-white));
+    line-height: 1.5;
+  }
+
+  footer p {
+    border-top: 1px solid #ccc;
+    padding-top: 0.25em;
+    font-size: 0.9rem;
+    color: #767676;
+  }
+
+  :is(h1, h2, h3) {
+    line-height: 1.2;
+  }
+
+  a {
+    color: navy;
+    text-underline-offset: 0.15em;
+  }
+}
