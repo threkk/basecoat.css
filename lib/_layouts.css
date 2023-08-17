@@ -1,37 +1,34 @@
-@layer layout {
-  * {
-    box-sizing: border-box;
-    margin: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+}
 
-  body > * {
-    width: min(100%, var(--bc-max-width, var(--bc-default-max-width)));
-    margin-left: auto;
-    margin-right: auto;
-  }
+body > * {
+  width: min(100%, var(--bc-max-width, var(--bc-default-max-width)));
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  main {
-    margin-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing));
-  }
+/* main, header, footer { */
+/*   margin-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing)); */
+/* } */
 
-  footer {
-    margin-top: auto;
-    padding-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing));
-  }
+main > * + *,
+section > * + *,
+article > * + *,
+header > * + *,
+footer > * + * {
+  margin-block-start: var(--bc-flow-spacing, var(--bc-default-flow-spacing));
+}
 
-
-  :is(h2, h3):not(:first-child) {
-    margin-top: 2em;
-  }
-
-  article * + * {
-    margin-top: 1em;
-  }
+footer {
+  margin-top: auto;
+  padding-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing));
 }

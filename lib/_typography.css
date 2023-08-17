@@ -1,25 +1,97 @@
-@layer core {
-  body {
-    font-family: var(--bc-font-family, var(--bc-default-font-family)); 
-    font-size: var(--bc-font-size, var(--bc-default-font-size));
-    color: var(--bc-black, var(--bc-default-black));
-    background-color: var(--bc-white, var(--bc-default-white));
-    line-height: 1.5;
-  }
+body {
+  font-family: var(--bc-font-family, var(--bc-default-font-sans));
+  font-size: var(--bc-font-size-body, var(--bc-default-font-size-body));
+  color: var(--bc-black, var(--bc-default-black));
+  background-color: var(--bc-white, var(--bc-default-white));
+  line-height: 1.6;
+}
 
-  footer p {
-    border-top: 1px solid #ccc;
-    padding-top: 0.25em;
-    font-size: 0.9rem;
-    color: #767676;
-  }
+/* footer p { */
+/*   border-top: 1px solid #ccc; */
+/*   padding-top: 0.25em; */
+/*   font-size: 0.9rem; */
+/*   color: #767676; */
+/* } */
 
-  :is(h1, h2, h3) {
-    line-height: 1.2;
-  }
+/* Text */ 
+p {
+  /* Orphans, wrapping */
+}
 
-  a {
-    color: navy;
-    text-underline-offset: 0.15em;
-  }
+small {
+  font-size: var(--bc-font-size-small, var(--bc-default-font-size-small));
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--bc-font-size-h1, var(--bc-default-font-size-h1));
+}
+
+h2 {
+  font-size: var(--bc-font-size-h2, var(--bc-default-font-size-h2));
+}
+
+h3 {
+  font-size: var(--bc-font-size-h3, var(--bc-default-font-size-h3));
+}
+
+h4 {
+  font-size: var(--bc-font-size-h4, var(--bc-default-font-size-h4));
+}
+
+h5 {
+  font-size: var(--bc-font-size-h5, var(--bc-default-font-size-h5));
+}
+
+h6 {
+  font-size: var(--bc-font-size-body, var(--bc-default-font-size-body));
+}
+
+/* Links */
+a {
+  color: var(--bc-primary, var(--bc-default-primary));
+  text-underline-offset: 0.15em;
+  text-decoration-style: solid;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+}
+
+a:visited {
+  color: var(--bc-accent, var(--bc-default-accent));
+}
+
+/* https://datatracker.ietf.org/doc/html/rfc7992#section-5.2 */
+a[href^="#"]:hover:after {
+  content: " \00B6";
+}
+
+h1[id^="section"]:before,
+h2[id^="section"]:before,
+h3[id^="section"]:before,
+h4[id^="section"]:before,
+h5[id^="section"]:before,
+h6[id^="section"]:before {
+  content: "\00A7 ";
+  font-weight: lighter;
+}
+
+/* Preformated */
+pre, code {
+  font-family: var(--bc-font-family);
+  page-break-inside: avoid;
+}
+
+
+/* Other typograpghy */ 
+abbr[title] {
+  text-decoration-style: dotted; 
+  text-underline-offset: 0.15em;
 }

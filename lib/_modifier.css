@@ -1,0 +1,10 @@
+body.dark {
+    color: var(--bc-white, var(--bc-default-white));
+    background-color: var(--bc-black, var(--bc-default-black));
+}
+
+/* https://smolcss.dev/#smol-grid-centering */
+.center {
+  display: grid;
+  place-content: center;
+}

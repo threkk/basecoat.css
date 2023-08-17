@@ -1,5 +1,3 @@
-@layer core {
-  html {
-    accent-color: --var(--bc-primary, --var(--bc-primary-default));
-  }
+html {
+  accent-color: --var(--bc-primary, --var(--bc-primary-default));
 }
