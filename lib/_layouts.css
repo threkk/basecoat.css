@@ -16,9 +16,9 @@ body > * {
   margin-right: auto;
 }
 
-/* main, header, footer { */
-/*   margin-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing)); */
-/* } */
+main, header, footer {
+  padding-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing));
+}
 
 main > * + *,
 section > * + *,
@@ -26,9 +26,4 @@ article > * + *,
 header > * + *,
 footer > * + * {
   margin-block-start: var(--bc-flow-spacing, var(--bc-default-flow-spacing));
-}
-
-footer {
-  margin-top: auto;
-  padding-top: var(--bc-layout-spacing, var(--bc-default-layout-spacing));
 }

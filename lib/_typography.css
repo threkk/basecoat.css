@@ -15,7 +15,8 @@ body {
 
 /* Text */ 
 p {
-  /* Orphans, wrapping */
+  orphans: 3;
+  widows: 3;
 }
 
 small {
@@ -53,6 +54,12 @@ h6 {
   font-size: var(--bc-font-size-body, var(--bc-default-font-size-body));
 }
 
+/* blockquote */ 
+blockquote {
+  border-left: solid 8px var(--bc-grey, var(--bc-default-grey));
+  padding: 1rem;
+}
+
 /* Links */
 a {
   color: var(--bc-primary, var(--bc-default-primary));
@@ -85,8 +92,12 @@ h6[id^="section"]:before {
 
 /* Preformated */
 pre, code {
-  font-family: var(--bc-font-family);
+  font-family: var(--bc-font-mono, var(--bc-default-font-mono));
   page-break-inside: avoid;
+  background-color: var(--bc-grey, var(--bc-default-grey));
+  padding: .4rem;
+  line-height: 1.25;
+  overflow-x: scroll;
 }
 
 
