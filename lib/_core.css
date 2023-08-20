@@ -1,3 +1,10 @@
 html {
   accent-color: --var(--bc-primary, --var(--bc-primary-default));
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  border-radius: 8px;
+}
