@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Development pages</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./.cache/basecoat.css" rel="stylesheet" />
+  <style type="text/css">
+    :root {
+      --bc-brand-hue: 189;
+      --bc-brand-saturation: 70%;
+      --bc-brand-lightness: 21%;
+    }
+
+    section {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 20ch 20ch;
+      grid-auto-rows: 20ch;
+    }
+
+    section div {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      margin-block-start: 0;
+    }
+
+    article.light section div.text1 {
+      background-color: var(--bc-text1-light);
+    }
+
+    article.light section div.text2 {
+      background-color: var(--bc-text2-light);
+    }
+
+    article.light section div.surface1 {
+      background-color: var(--bc-surface1-light);
+    }
+
+    article.light section div.surface2 {
+      background-color: var(--bc-surface2-light);
+    }
+
+    article.light section div.surface3 {
+      background-color: var(--bc-surface3-light);
+    }
+
+    article.light section div.surface4 {
+      background-color: var(--bc-surface4-light);
+    }
+
+    article.dark section div.text1 {
+      background-color: var(--bc-text1-dark);
+    }
+
+    article.dark section div.text2 {
+      background-color: var(--bc-text2-dark);
+    }
+
+    article.dark section div.surface1 {
+      background-color: var(--bc-surface1-dark);
+    }
+
+    article.dark section div.surface2 {
+      background-color: var(--bc-surface2-dark);
+    }
+
+    article.dark section div.surface3 {
+      background-color: var(--bc-surface3-dark);
+    }
+
+    article.dark section div.surface4 {
+      background-color: var(--bc-surface4-dark);
+    }
+
+    article.dim section div.text1 {
+      background-color: var(--bc-text1-dim);
+    }
+
+    article.dim section div.text2 {
+      background-color: var(--bc-text2-dim);
+    }
+
+    article.dim section div.surface1 {
+      background-color: var(--bc-surface1-dim);
+    }
+
+    article.dim section div.surface2 {
+      background-color: var(--bc-surface2-dim);
+    }
+
+    article.dim section div.surface3 {
+      background-color: var(--bc-surface3-dim);
+    }
+
+    article.dim section div.surface4 {
+      background-color: var(--bc-surface4-dim);
+    }
+
+    article section div.primary-accent-fg {
+      background-color: var(--bc-primary-accent-fg);
+    }
+
+    article section div.primary-accent-bg {
+      background-color: var(--bc-primary-accent-bg);
+    }
+
+    article section div.secondary-accent-fg {
+      background-color: var(--bc-secondary-accent-fg);
+    }
+
+    article section div.secondary-accent-bg {
+      background-color: var(--bc-secondary-accent-bg);
+    }
+
+    article section div.info {
+      background-color: var(--bc-info);
+    }
+
+    article section div.success {
+      background-color: var(--bc-success);
+    }
+
+    article section div.warning {
+      background-color: var(--bc-warning);
+    }
+
+    article section div.error {
+      background-color: var(--bc-error);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Colour schemes</h1>
+    <article>
+      <h2>Common</h2>
+      <h3>Accent</h3>
+      <section>
+        <div class="primary-accent-fg"></div>
+        <div class="primary-accent-bg"></div>
+        <div class="secondary-accent-fg"></div>
+        <div class="secondary-accent-bg"></div>
+      </section>
+      <h3>Info, success, warning, error</h3>
+      <section>
+        <div class="info"></div>
+        <div class="success"></div>
+        <div class="warning"></div>
+        <div class="error"></div>
+      </section>
+    </article>
+    <article class="light">
+      <h2>Light</h2>
+      <h3>Text</h3>
+      <section>
+        <div class="text1"></div>
+        <div class="text2"></div>
+      </section>
+      <h3>Surface</h3>
+      <section>
+        <div class="surface1"></div>
+        <div class="surface2"></div>
+        <div class="surface3"></div>
+        <div class="surface4"></div>
+      </section>
+    </article>
+    <h2>Dark</h2>
+    <article class="dark">
+      <h2>Dark</h2>
+      <h3>Text</h3>
+      <section>
+        <div class="text1"></div>
+        <div class="text2"></div>
+      </section>
+      <h3>Surface</h3>
+      <section>
+        <div class="surface1"></div>
+        <div class="surface2"></div>
+        <div class="surface3"></div>
+        <div class="surface4"></div>
+      </section>
+    </article>
+    <article class="dim">
+      <h2>Dim</h2>
+      <h3>Text</h3>
+      <section>
+        <div class="text1"></div>
+        <div class="text2"></div>
+      </section>
+      <h3>Surface</h3>
+      <section>
+        <div class="surface1"></div>
+        <div class="surface2"></div>
+        <div class="surface3"></div>
+        <div class="surface4"></div>
+      </section>
+    </article>
+
+    <h2>Dim</h2>
+  </main>
+</body>
+<script type="text/javascript" src="./reload.js"></script>
+
+</html>
