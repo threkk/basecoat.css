@@ -1,0 +1,12 @@
+/* https://smolcss.dev/#smol-grid-centering */
+.center {
+  display: grid;
+  place-content: center;
+}
+
+/* https://open-props.style/#borders */
+.circle {
+  inline-size: var(--size-5);
+  aspect-ratio: var(--ratio-square);
+  border-radius: var(--radius-round);
+}

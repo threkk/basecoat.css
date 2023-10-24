@@ -1,6 +1,6 @@
-@import './lib/_reset.css';
-@import './lib/_variables.css';
+@import './lib/_open-props.css';
 @import './lib/_layouts.css';
-@import './lib/_typography.css';
 @import './lib/_core.css';
-@import './lib/_modifier.css';
+@import './lib/_utilities.css';
+@import './lib/_typography.css';
+@import './lib/_variables.css';

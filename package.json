@@ -9,6 +9,7 @@
     "esbuild": "^0.18.3"
   },
   "dependencies": {
+    "open-props": "^1.6.5",
     "sanitize.css": "^13.0.0"
   }
 }

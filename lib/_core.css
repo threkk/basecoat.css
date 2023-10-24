@@ -1,10 +1,18 @@
-html {
-  accent-color: --var(--bc-primary, --var(--bc-primary-default));
+* {
+  scroll-behavior: smooth;
+  accent-color: var(--bc-brand);
+  color-scheme: dark light;
 }
 
-img {
+::selection {
+  background-color: var(--bc-brand);
+}
+
+/* Pictures */
+:where(img) {
   max-width: 100%;
   height: auto;
   border-style: none;
-  border-radius: 8px;
+  aspect-ratio: var(--ratio-golden);
+  border-radius: var(--radius-3);
 }

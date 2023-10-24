@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  open-props:
+    specifier: ^1.6.5
+    version: 1.6.5
   sanitize.css:
     specifier: ^13.0.0
     version: 13.0.0
@@ -243,6 +246,10 @@ packages:
       '@esbuild/win32-ia32': 0.18.3
       '@esbuild/win32-x64': 0.18.3
     dev: true
+
+  /open-props@1.6.5:
+    resolution: {integrity: sha512-l1oyu9uRQb319RGsCWZc8MWqPWfvwFCrueZreGEG3Y04og3mzyd1q4WKrdMnCx+PYiD63QOl/rge/6PK00wK6g==}
+    dev: false
 
   /sanitize.css@13.0.0:
     resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}

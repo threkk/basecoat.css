@@ -1,40 +1,112 @@
 :root {
+  /* # Basecoat variables */
+
+  /* ## Fonts */
+  /* ### Font family https://modernfontstacks.com/ */
+  --bc-font-sans: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif; /* Geometric humanist */
+  --bc-font-serif: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
+    P052, Sylfaen, serif; /* Didone */
+  --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
+
+  --bc-font-body: var(--bc-font-sans);
+  --bc-font-header: var(--bc-font-serif);
+
+  /* Brand color: #8fbc8f == hsl(120, 25%, 65%) */
+
+  --bc-brand-hue: 120;
+  --bc-brand-saturation: 25%;
+  --bc-brand-lightness: 65%;
+  --bc-brand: hsl(
+    var(--bc-brand-hue),
+    var(--bc-brand-saturation),
+    var(--bc-brand-lightness)
+  );
+
+  /* Light scheme */
+  --bc-brand-light: var(--bc-brand);
+  --bc-text1-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
+  --bc-text2-light: hsl(var(--bc-brand-hue) 30% 30%);
+
+  --bc-surface1-light: hsl(var(--bc-brand-hue) 25% 90%);
+  --bc-surface2-light: hsl(var(--bc-brand-hue) 20% 99%);
+  --bc-surface3-light: hsl(var(--bc-brand-hue) 20% 92%);
+  --bc-surface4-light: hsl(var(--bc-brand-hue) 20% 85%);
+  --bc-surface-shadow-light: var(--bc-brand-hue) 10% 20%;
+  --bc-shadow-strength-light: 0.02;
+
+  /* Dark scheme */
+  --bc-brand-dark: hsl(
+    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2)
+      calc(var(--bc-brand-lightness) / 1.5)
+  );
+  --bc-text1-dark: hsl(var(--bc-brand-hue) 15% 85%);
+  --bc-text2-dark: hsl(var(--bc-brand-hue) 5% 65%);
+
+  --bc-surface1-dark: hsl(var(--bc-brand-hue) 10% 10%);
+  --bc-surface2-dark: hsl(var(--bc-brand-hue) 10% 15%);
+  --bc-surface3-dark: hsl(var(--bc-brand-hue) 5% 20%);
+  --bc-surface4-dark: hsl(var(--bc-brand-hue) 5% 25%);
+  --bc-surface-shadow-dark: var(--bc-brand-hue) 50% 3%;
+  --bc-shadow-strength-dark: 0.8;
+
+  /* Dim scheme */
+  --bc-brand-dim: hsl(
+    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 1.25)
+      calc(var(--bc-brand-lightness) / 1.25)
+  );
+  --bc-text1-dim: hsl(var(--bc-brand-hue) 15% 75%);
+  --bc-text2-dim: hsl(var(--bc-brand-hue) 10% 61%);
+
+  --bc-surface1-dim: hsl(var(--bc-brand-hue) 10% 20%);
+  --bc-surface2-dim: hsl(var(--bc-brand-hue) 10% 25%);
+  --bc-surface3-dim: hsl(var(--bc-brand-hue) 5% 30%);
+  --bc-surface4-dim: hsl(var(--bc-brand-hue) 5% 35%);
+  --bc-surface-shadow-dim: var(--bc-brand-hue) 30% 13%;
+  --bc-shadow-strength-dim: 0.2;
+
+  /* Accent, info, success, warning, error */
+  --bc-accent-offset: 30;
+
+  --bc-primary-accent-fg: hsl(
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
+  --bc-primary-accent-bg: hsl(
+    calc(var(--bc-brand-hue) + 180 + var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
+
+  --bc-secondary-accent-fg: hsl(
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
+  --bc-secondary-accent-bg: hsl(
+    calc(var(--bc-brand-hue) + 180 - var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
+
+  --bc-info: hsl(203 var(--bc-brand-saturation) var(--bc-brand-lightness));
+  --bc-success: hsl(120 var(--bc-brand-saturation) var(--bc-brand-lightness));
+  --bc-warning: hsl(40 var(--bc-brand-saturation) var(--bc-brand-lightness));
+  --bc-error: hsl(2 var(--bc-brand-saturation) var(--bc-brand-lightness));
+
+  /* open-props variables */
   /* Colours */
-  --bc-default-primary: #8fbc8f;
-  --bc-default-accent: #bc8fbc;
-  --bc-default-white: #fffafa;
-  --bc-default-grey: #eee;
-  --bc-default-black: #121212;
-  --bc-default-red: #ff6347;
-  --bc-default-yellow: #ffd700;
-  --bc-default-green: #32cd32;
-  --bc-default-cyan: #20b2aa;
-  --bc-default-blue: #191970;
-  --bc-default-magenta: #9400d3;
+  --font-sans: var(--bc-font-sans);
+  --font-serif: var(--bc-font-serif);
+  --font-mono: var(--bc-font-mono);
 
-  /* Fonts */
-  /* https://modernfontstacks.com/ */
-  --bc-default-font-sans: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif; /* Geometric humanist */
-  --bc-default-font-serif: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif; /* Didone */
-  --bc-default-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace; /*Monospace code*/
-
-  --bc-default-max-width: 75ch;
-  --bc-default-layout-spacing: clamp(1.5rem, 6%, 3rem);
-  --bc-default-flow-spacing: clamp(1rem, 3%, 1.5rem);
-
-  /* Headings font size */
-  /* https://utopia.fyi/type/calculator?c=375,18,1.2,2560,20,1.25,5,2,2560&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --bc-default-font-size-xsmall: clamp(0.78rem, calc(0.78rem + 0.01vw), 0.8rem);
-  --bc-default-font-size-small: clamp(0.94rem, calc(0.93rem + 0.05vw), 1rem);
-  --bc-default-font-size-body: clamp(1.13rem, calc(1.1rem + 0.09vw), 1.25rem);
-  --bc-default-font-size-h5: clamp(1.35rem, calc(1.31rem + 0.16vw), 1.56rem);
-  --bc-default-font-size-h4: clamp(1.62rem, calc(1.56rem + 0.24vw), 1.95rem);
-  --bc-default-font-size-h3: clamp(1.94rem, calc(1.86rem + 0.36vw), 2.44rem);
-  --bc-default-font-size-h2: clamp(2.33rem, calc(2.21rem + 0.53vw), 3.05rem);
-  --bc-default-font-size-h1: clamp(2.8rem, calc(2.63rem + 0.74vw), 3.82rem);
-
-  /* Spacing */
-  --bc-default-sp-s: clamp(1rem, 3%, 1.5rem);
-  --bc-default-sp-m: clamp(1.5rem, 6%, 3rem);
-  --bc-default-sp-l: clamp(3rem, 12%, 6rem);
+  --brand: var(--bc-brand);
+  /* --link */
+  /* --link-visited */
+  /* --text-1 */
+  /* --text2 */
+  /* --surface-1 */
+  /* --surface-2 */
+  /* --surface-3 */
+  /* --surface-4 */
+  /* --scrollthumb-color */
+  /* --border */
 }
