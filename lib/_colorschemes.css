@@ -1,0 +1,182 @@
+/* OPEN-PROPS VARIABLES ASSIGNATION */
+/* Automatic theme */
+:root {
+  color-scheme: light;
+
+  --brand: var(--bc-brand-light);
+  --bc-accent1: var(--bc-accent1-light);
+  --bc-accent2: var(--bc-accent2-light);
+  --bc-text1: var(--bc-text1-light);
+  --bc-text2: var(--bc-text2-light);
+  --bc-surface1: var(--bc-surface1-light);
+  --bc-surface2: var(--bc-surface2-light);
+  --bc-surface3: var(--bc-surface3-light);
+  --bc-surface4: var(--bc-surface4-light);
+  --bc-surface-shadow: var(--bc-surface-shadow-light);
+  --bc-shadow-strength: var(--bc-shadow-strenght-light);
+
+  --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
+  --bc-success: hsl(120 var(--bc-brand-saturation) 75%);
+  --bc-warning: hsl(40 var(--bc-brand-saturation) 75%);
+  --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --brand: var(--bc-brand-dark);
+    --bc-accent1: var(--bc-accent1-dark);
+    --bc-accent2: var(--bc-accent2-dark);
+    --bc-text1: var(--bc-text1-dark);
+    --bc-text2: var(--bc-text2-dark);
+    --bc-surface1: var(--bc-surface1-dark);
+    --bc-surface2: var(--bc-surface2-dark);
+    --bc-surface3: var(--bc-surface3-dark);
+    --bc-surface4: var(--bc-surface4-dark);
+    --bc-surface-shadow: var(--bc-surface-shadow-dark);
+    --bc-shadow-strength: var(--bc-shadow-strength-dark);
+
+    --bc-info: hsl(203 var(--bc-brand-saturation-dark) 30%);
+    --bc-success: hsl(120 var(--bc-brand-saturation-dark) 30%);
+    --bc-warning: hsl(40 var(--bc-brand-saturation-dark) 30%);
+    --bc-error: hsl(2 var(--bc-brand-saturation-dark) 30%);
+  }
+}
+
+/* Manual set up */
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --brand: var(--bc-brand-light);
+  --bc-accent1: var(--bc-accent1-light);
+  --bc-accent2: var(--bc-accent2-light);
+  --bc-text1: var(--bc-text1-light);
+  --bc-text2: var(--bc-text2-light);
+  --bc-surface1: var(--bc-surface1-light);
+  --bc-surface2: var(--bc-surface2-light);
+  --bc-surface3: var(--bc-surface3-light);
+  --bc-surface4: var(--bc-surface4-light);
+  --bc-surface-shadow: var(--bc-surface-shadow-light);
+  --bc-shadow-strength: var(--bc-shadow-strenght-light);
+
+  --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
+  --bc-success: hsl(120 var(--bc-brand-saturation) 75%);
+  --bc-warning: hsl(40 var(--bc-brand-saturation) 75%);
+  --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+
+  --brand: var(--bc-brand-dark);
+  --bc-accent1: var(--bc-accent1-dark);
+  --bc-accent2: var(--bc-accent2-dark);
+  --bc-text1: var(--bc-text1-dark);
+  --bc-text2: var(--bc-text2-dark);
+  --bc-surface1: var(--bc-surface1-dark);
+  --bc-surface2: var(--bc-surface2-dark);
+  --bc-surface3: var(--bc-surface3-dark);
+  --bc-surface4: var(--bc-surface4-dark);
+  --bc-surface-shadow: var(--bc-surface-shadow-dark);
+  --bc-shadow-strength: var(--bc-shadow-strength-dark);
+
+  --bc-info: hsl(203 var(--bc-brand-saturation-dark) 30%);
+  --bc-success: hsl(120 var(--bc-brand-saturation-dark) 30%);
+  --bc-warning: hsl(40 var(--bc-brand-saturation-dark) 30%);
+  --bc-error: hsl(2 var(--bc-brand-saturation-dark) 30%);
+}
+[color-scheme="dim"] {
+  color-scheme: dark;
+
+  --brand: var(--bc-brand-dim);
+  --bc-accent1: var(--bc-accent1-dim);
+  --bc-accent2: var(--bc-accent2-dim);
+  --bc-text1: var(--bc-text1-dim);
+  --bc-text2: var(--bc-text2-dim);
+  --bc-surface1: var(--bc-surface1-dim);
+  --bc-surface2: var(--bc-surface2-dim);
+  --bc-surface3: var(--bc-surface3-dim);
+  --bc-surface4: var(--bc-surface4-dim);
+  --bc-surface-shadow: var(--bc-surface-shadow-dim);
+  --bc-shadow-strenght: var(--bc-shadow-strength-dim);
+
+  --bc-info: hsl(203 var(--bc-brand-saturation-dim) 40%);
+  --bc-success: hsl(120 var(--bc-brand-saturation-dim) 40%);
+  --bc-warning: hsl(40 var(--bc-brand-saturation-dim) 40%);
+  --bc-error: hsl(2 var(--bc-brand-saturation-dim) 40%);
+}
+
+/* OPEN PROPS NORMALISE */
+/* These are the open props normalize theme variables that we need to assign */
+:where(:root) {
+  --font-sans: var(--bc-font-sans);
+  --font-serif: var(--bc-font-serif);
+  --font-mono: var(--bc-font-mono);
+
+  --link: var(--brand);
+  --link-visited: var(--bc-accent2);
+  --text-1: var(--bc-text1);
+  --text2: var(--bc-text2);
+  --surface-1: var(--bc-surface1);
+  --surface-2: var(--bc-surface2);
+  --surface-3: var(--bc-surface3);
+  --surface-4: var(--bc-surface4);
+  --surface-shadow: var(--bc-surface-shadow);
+  --shadow-strength: var(--bc-shadow-strength);
+  --scrollthumb-color: var(--brand);
+  /* --border; */
+}
+
+/* SURFACES */
+/* From https://web.dev/articles/building/a-color-scheme#accessible_colors */
+:where(.surface1) {
+  background-color: var(--bc-surface1);
+  color: var(--bc-text2);
+}
+
+:where(.surface2) {
+  background-color: var(--bc-surface2);
+  color: var(--bc-text2);
+}
+
+:where(.surface3) {
+  background-color: var(--bc-surface3);
+  color: var(--bc-text1);
+}
+
+:where(.surface4) {
+  background-color: var(--bc-surface4);
+  color: var(--bc-text1);
+}
+
+:where(.info) {
+  background-color: var(--bc-info);
+}
+
+:where(.success) {
+  background-color: var(--bc-success);
+}
+
+:where(.warning) {
+  background-color: var(--bc-warning);
+}
+
+:where(.error) {
+  background-color: var(--bc-error);
+}
+
+:where(.shadow) {
+  box-shadow:
+    0 2.8px 2.2px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 6.7px 5.3px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.01)),
+    0 12.5px 10px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 22.3px 17.9px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 41.8px 33.4px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bc-surface-shadow) / var(--bc-shadow-strength));
+}

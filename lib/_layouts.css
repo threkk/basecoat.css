@@ -3,6 +3,7 @@
   margin: 0;
 }
 
+/* GENERAL */
 /* Container flow */
 body {
   display: flex;
@@ -39,4 +40,9 @@ footer > * + * {
 
 :where(aside) {
   width: var(--size-content-2);
+}
+
+/* Forms */
+:where(input + label) {
+  margin-inline-start: var(--size-fluid-1);
 }

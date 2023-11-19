@@ -8,16 +8,17 @@
   <link href="./.cache/basecoat.css" rel="stylesheet" />
   <style type="text/css">
     :root {
-      --bc-brand-hue: 189;
-      --bc-brand-saturation: 70%;
-      --bc-brand-lightness: 21%;
+      /* Light sea gree */
+      --bc-brand-hue: 180;
+      --bc-brand-saturation: 66%;
+      --bc-brand-lightness: 38%;
     }
 
     section {
       display: grid;
       grid-gap: 1rem;
-      grid-template-columns: 20ch 20ch;
-      grid-auto-rows: 20ch;
+      grid-template-columns: 18ch 18ch;
+      grid-auto-rows: 18ch;
     }
 
     section div {
@@ -27,108 +28,24 @@
       margin-block-start: 0;
     }
 
-    article.light section div.text1 {
-      background-color: var(--bc-text1-light);
+    .brand {
+      background-color: var(--bc-brand);
     }
 
-    article.light section div.text2 {
-      background-color: var(--bc-text2-light);
+    .accent1 {
+      background-color: var(--bc-accent1);
     }
 
-    article.light section div.surface1 {
-      background-color: var(--bc-surface1-light);
+    .accent2 {
+      background-color: var(--bc-accent2);
     }
 
-    article.light section div.surface2 {
-      background-color: var(--bc-surface2-light);
+    .text1 {
+      background-color: var(--bc-text1);
     }
 
-    article.light section div.surface3 {
-      background-color: var(--bc-surface3-light);
-    }
-
-    article.light section div.surface4 {
-      background-color: var(--bc-surface4-light);
-    }
-
-    article.dark section div.text1 {
-      background-color: var(--bc-text1-dark);
-    }
-
-    article.dark section div.text2 {
-      background-color: var(--bc-text2-dark);
-    }
-
-    article.dark section div.surface1 {
-      background-color: var(--bc-surface1-dark);
-    }
-
-    article.dark section div.surface2 {
-      background-color: var(--bc-surface2-dark);
-    }
-
-    article.dark section div.surface3 {
-      background-color: var(--bc-surface3-dark);
-    }
-
-    article.dark section div.surface4 {
-      background-color: var(--bc-surface4-dark);
-    }
-
-    article.dim section div.text1 {
-      background-color: var(--bc-text1-dim);
-    }
-
-    article.dim section div.text2 {
-      background-color: var(--bc-text2-dim);
-    }
-
-    article.dim section div.surface1 {
-      background-color: var(--bc-surface1-dim);
-    }
-
-    article.dim section div.surface2 {
-      background-color: var(--bc-surface2-dim);
-    }
-
-    article.dim section div.surface3 {
-      background-color: var(--bc-surface3-dim);
-    }
-
-    article.dim section div.surface4 {
-      background-color: var(--bc-surface4-dim);
-    }
-
-    article section div.primary-accent-fg {
-      background-color: var(--bc-primary-accent-fg);
-    }
-
-    article section div.primary-accent-bg {
-      background-color: var(--bc-primary-accent-bg);
-    }
-
-    article section div.secondary-accent-fg {
-      background-color: var(--bc-secondary-accent-fg);
-    }
-
-    article section div.secondary-accent-bg {
-      background-color: var(--bc-secondary-accent-bg);
-    }
-
-    article section div.info {
-      background-color: var(--bc-info);
-    }
-
-    article section div.success {
-      background-color: var(--bc-success);
-    }
-
-    article section div.warning {
-      background-color: var(--bc-warning);
-    }
-
-    article section div.error {
-      background-color: var(--bc-error);
+    .text2 {
+      background-color: var(--bc-text2);
     }
   </style>
 </head>
@@ -136,73 +53,87 @@
 <body>
   <main>
     <h1>Colour schemes</h1>
+    <fieldset>
+      <legend>Theme</legend>
+      <input type="color" name="brand" id="brand" value="#21A0A0" /><label for="brand">Brand</label><br />
+      <input type="radio" name="theme" id="auto" value="auto" checked="true" /><label for="auto">Auto</label>
+      <input type="radio" name="theme" id="light" value="light" /><label for="light">Light</label>
+      <input type="radio" name="theme" id="dim" value="dim" /><label for="dim">Dim</label>
+      <input type="radio" name="theme" id="dark" value="dark" /><label for="dark">Dark</label>
+    </fieldset>
     <article>
-      <h2>Common</h2>
-      <h3>Accent</h3>
+      <h2>Brand &amp; accents</h2>
       <section>
-        <div class="primary-accent-fg"></div>
-        <div class="primary-accent-bg"></div>
-        <div class="secondary-accent-fg"></div>
-        <div class="secondary-accent-bg"></div>
+        <div class="brand">Brand</div>
+        <div class="accent1">Accent 1</div>
+        <div class="accent2">Accent 2</div>
       </section>
-      <h3>Info, success, warning, error</h3>
-      <section>
-        <div class="info"></div>
-        <div class="success"></div>
-        <div class="warning"></div>
-        <div class="error"></div>
-      </section>
-    </article>
-    <article class="light">
-      <h2>Light</h2>
-      <h3>Text</h3>
-      <section>
-        <div class="text1"></div>
-        <div class="text2"></div>
-      </section>
-      <h3>Surface</h3>
-      <section>
-        <div class="surface1"></div>
-        <div class="surface2"></div>
-        <div class="surface3"></div>
-        <div class="surface4"></div>
-      </section>
-    </article>
-    <h2>Dark</h2>
-    <article class="dark">
-      <h2>Dark</h2>
-      <h3>Text</h3>
-      <section>
-        <div class="text1"></div>
-        <div class="text2"></div>
-      </section>
-      <h3>Surface</h3>
-      <section>
-        <div class="surface1"></div>
-        <div class="surface2"></div>
-        <div class="surface3"></div>
-        <div class="surface4"></div>
-      </section>
-    </article>
-    <article class="dim">
-      <h2>Dim</h2>
-      <h3>Text</h3>
-      <section>
-        <div class="text1"></div>
-        <div class="text2"></div>
-      </section>
-      <h3>Surface</h3>
-      <section>
-        <div class="surface1"></div>
-        <div class="surface2"></div>
-        <div class="surface3"></div>
-        <div class="surface4"></div>
-      </section>
-    </article>
 
-    <h2>Dim</h2>
+      <h2>Text</h2>
+      <section>
+        <div class="text1">Text 1</div>
+        <div class="text2">Text 2</div>
+      </section>
+      <h2>Surface</h2>
+      <section>
+        <div class="surface1 shadow">Surface 1</div>
+        <div class="surface2 shadow">Surface 2</div>
+        <div class="surface3 shadow">Surface 3</div>
+        <div class="surface4 shadow">Surface 4</div>
+      </section>
+      <h2>Info, success, warning, error</h2>
+      <section>
+        <div class="info">Info</div>
+        <div class="success">Success</div>
+        <div class="warning">Warning</div>
+        <div class="error">Error</div>
+      </section>
+    </article>
   </main>
 </body>
 <script type="text/javascript" src="./reload.js"></script>
+<script type="text/javascript">
+  const root = document.querySelector(":root");
+  document.getElementsByName("theme").forEach((radio) =>
+    radio.addEventListener("change", (e) => {
+      root.setAttribute("color-scheme", e.target.value);
+    }),
+  );
+
+  document.getElementById("brand").addEventListener("change", (e) => {
+    const hex = e.target.value;
+
+    // From https://css-tricks.com/converting-color-spaces-in-javascript/#aa-hex-to-hsl
+    const r = parseInt(`0x${hex[1]}${hex[2]}`) / 255;
+    const g = parseInt(`0x${hex[3]}${hex[4]}`) / 255;
+    const b = parseInt(`0x${hex[5]}${hex[6]}`) / 255;
+
+    let cmin = Math.min(r, g, b),
+      cmax = Math.max(r, g, b),
+      delta = cmax - cmin,
+      h = 0,
+      s = 0,
+      l = 0;
+
+    if (delta == 0) h = 0;
+    else if (cmax == r) h = ((g - b) / delta) % 6;
+    else if (cmax == g) h = (b - r) / delta + 2;
+    else h = (r - g) / delta + 4;
+
+    h = Math.round(h * 60);
+
+    if (h < 0) h += 360;
+
+    l = (cmax + cmin) / 2;
+    s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+    s = +(s * 100).toFixed(1);
+    l = +(l * 100).toFixed(1);
+
+    const root = document.querySelector(":root");
+    root.style.setProperty("--bc-brand-hue", h);
+    root.style.setProperty("--bc-brand-saturation", `${s}%`);
+    root.style.setProperty("--bc-brand-lightness", `${l}%`);
+  });
+</script>
 
 </html>

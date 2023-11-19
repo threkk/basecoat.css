@@ -1,8 +1,8 @@
 :root {
-  /* # Basecoat variables */
+  /* BASECOAT VARIABLES */
 
-  /* ## Fonts */
-  /* ### Font family https://modernfontstacks.com/ */
+  /* FONTS */
+  /* Font family https://modernfontstacks.com/ */
   --bc-font-sans: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
     sans-serif; /* Geometric humanist */
   --bc-font-serif: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
@@ -13,100 +13,94 @@
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
 
+  /* COLOURS */
   /* Brand color: #8fbc8f == hsl(120, 25%, 65%) */
-
   --bc-brand-hue: 120;
   --bc-brand-saturation: 25%;
   --bc-brand-lightness: 65%;
+  --bc-accent-offset: 30;
+
+  /* COMPUTED VARIABLES */
+  /* Do not touch unless you know what you are doing */
   --bc-brand: hsl(
     var(--bc-brand-hue),
     var(--bc-brand-saturation),
     var(--bc-brand-lightness)
   );
 
+  /* Dark and dim variations */
+  --bc-brand-saturation-dark: calc(var(--bc-brand-saturation) / 2);
+  --bc-brand-lightness-dark: calc(var(--bc-brand-lightness) / 1.5);
+  --bc-brand-saturation-dim: calc(var(--bc-brand-saturation) / 1.25);
+  --bc-brand-lightness-dim: calc(var(--bc-brand-lightness) / 1.25);
+
   /* Light scheme */
   --bc-brand-light: var(--bc-brand);
   --bc-text1-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
   --bc-text2-light: hsl(var(--bc-brand-hue) 30% 30%);
-
+  --bc-accent1-light: hsl(
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
+  --bc-accent2-light: hsl(
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+      var(--bc-brand-saturation) var(--bc-brand-lightness)
+  );
   --bc-surface1-light: hsl(var(--bc-brand-hue) 25% 90%);
   --bc-surface2-light: hsl(var(--bc-brand-hue) 20% 99%);
   --bc-surface3-light: hsl(var(--bc-brand-hue) 20% 92%);
   --bc-surface4-light: hsl(var(--bc-brand-hue) 20% 85%);
+
   --bc-surface-shadow-light: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength-light: 0.02;
 
   /* Dark scheme */
   --bc-brand-dark: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2)
-      calc(var(--bc-brand-lightness) / 1.5)
+    var(--bc-brand-hue) var(--bc-brand-saturation-dark)
+      var(--bc-brand-lightness-dark)
   );
-  --bc-text1-dark: hsl(var(--bc-brand-hue) 15% 85%);
+  --bc-text1-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 95%);
   --bc-text2-dark: hsl(var(--bc-brand-hue) 5% 65%);
+  --bc-accent1-dark: hsl(
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+      var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
+  );
+
+  --bc-accent2-dark: hsl(
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+      var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
+  );
 
   --bc-surface1-dark: hsl(var(--bc-brand-hue) 10% 10%);
   --bc-surface2-dark: hsl(var(--bc-brand-hue) 10% 15%);
   --bc-surface3-dark: hsl(var(--bc-brand-hue) 5% 20%);
   --bc-surface4-dark: hsl(var(--bc-brand-hue) 5% 25%);
+
   --bc-surface-shadow-dark: var(--bc-brand-hue) 50% 3%;
   --bc-shadow-strength-dark: 0.8;
 
   /* Dim scheme */
   --bc-brand-dim: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 1.25)
-      calc(var(--bc-brand-lightness) / 1.25)
+    var(--bc-brand-hue) var(--bc-brand-saturation-dim)
+      var(--bc-brand-lightness-dim)
   );
   --bc-text1-dim: hsl(var(--bc-brand-hue) 15% 75%);
   --bc-text2-dim: hsl(var(--bc-brand-hue) 10% 61%);
+  --bc-accent1-dim: hsl(
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+      var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
+  );
+
+  --bc-accent2-dim: hsl(
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+      var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
+  );
 
   --bc-surface1-dim: hsl(var(--bc-brand-hue) 10% 20%);
   --bc-surface2-dim: hsl(var(--bc-brand-hue) 10% 25%);
   --bc-surface3-dim: hsl(var(--bc-brand-hue) 5% 30%);
   --bc-surface4-dim: hsl(var(--bc-brand-hue) 5% 35%);
+
   --bc-surface-shadow-dim: var(--bc-brand-hue) 30% 13%;
   --bc-shadow-strength-dim: 0.2;
-
-  /* Accent, info, success, warning, error */
-  --bc-accent-offset: 30;
-
-  --bc-primary-accent-fg: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
-  --bc-primary-accent-bg: hsl(
-    calc(var(--bc-brand-hue) + 180 + var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
-
-  --bc-secondary-accent-fg: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
-  --bc-secondary-accent-bg: hsl(
-    calc(var(--bc-brand-hue) + 180 - var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
-
-  --bc-info: hsl(203 var(--bc-brand-saturation) var(--bc-brand-lightness));
-  --bc-success: hsl(120 var(--bc-brand-saturation) var(--bc-brand-lightness));
-  --bc-warning: hsl(40 var(--bc-brand-saturation) var(--bc-brand-lightness));
-  --bc-error: hsl(2 var(--bc-brand-saturation) var(--bc-brand-lightness));
-
-  /* open-props variables */
-  /* Colours */
-  --font-sans: var(--bc-font-sans);
-  --font-serif: var(--bc-font-serif);
-  --font-mono: var(--bc-font-mono);
-
-  --brand: var(--bc-brand);
-  /* --link */
-  /* --link-visited */
-  /* --text-1 */
-  /* --text2 */
-  /* --surface-1 */
-  /* --surface-2 */
-  /* --surface-3 */
-  /* --surface-4 */
-  /* --scrollthumb-color */
-  /* --border */
 }

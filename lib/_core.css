@@ -9,10 +9,23 @@
 }
 
 /* Pictures */
+/* https://twitter.com/csswizardry/status/1717841334462005661?s=61&t=VLc-QmNqbQyNntAOtnu1qw */
 :where(img) {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
   border-style: none;
   aspect-ratio: var(--ratio-golden);
   border-radius: var(--radius-3);
+}
+
+/* Horizontal line */ 
+:where(hr) {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--bc-text2), var(--bc-text1), var(--bc-text2));
 }
