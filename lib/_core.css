@@ -27,5 +27,5 @@
 :where(hr) {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, var(--bc-text2), var(--bc-text1), var(--bc-text2));
+  background-image: linear-gradient(to right, var(--bc-text2), var(--bc-brand), var(--bc-text2));
 }

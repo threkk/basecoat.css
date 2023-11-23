@@ -28,6 +28,10 @@
 }
 
 /* Links */
+:where(a) {
+  /* Switch the default behaviour. If we specify a link color, we use it instead of the brand */
+  color: var(--link, var(--brand));
+}
 :where(a:hover) {
   text-decoration-style: solid;
   text-underline-offset: 0.15em;
@@ -49,7 +53,7 @@
 
 /* Blockquote */
 :where(blockquote) {
-  border-color: var(--bc-primary-accent);
+  border-color: var(--bc-brand);
   background-color: var(--surface-3);
   justify-self: flex-start;
 }
@@ -59,4 +63,20 @@
   text-decoration-style: dotted;
   text-underline-offset: 0.15em;
   cursor: help;
+}
+
+/* Insert, delete, mark */ 
+:where(mark) {
+  color: var(--bc-text1);
+  background-color: var(--bc-warning);
+}
+
+:where(ins) {
+  color: var(--bc-text1);
+  background-color: var(--bc-success);
+}
+
+:where(del) {
+  color: var(--bc-text1);
+  background-color: var(--bc-error);
 }

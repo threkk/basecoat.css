@@ -18,17 +18,19 @@ body > * {
   margin-right: auto;
 }
 
-main, header, footer {
+:where(main, header, footer) {
   padding-top: var(--size-fluid-3);
   margin: auto;
   width: min(100%, var(--size-content-3));
 }
 
-main > * + *,
-section > * + *,
-article > * + *,
-header > * + *,
-footer > * + * {
+:where(
+    main > * + *,
+    section > * + *,
+    article > * + *,
+    header > * + *,
+    footer > * + *
+  ) {
   margin-block-start: var(--size-fluid-2);
 }
 

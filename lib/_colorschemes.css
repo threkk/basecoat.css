@@ -21,26 +21,27 @@
   --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
 }
 
+/* Default color scheme when dark is dimmed dark rather than true dark */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
 
-    --brand: var(--bc-brand-dark);
-    --bc-accent1: var(--bc-accent1-dark);
-    --bc-accent2: var(--bc-accent2-dark);
-    --bc-text1: var(--bc-text1-dark);
-    --bc-text2: var(--bc-text2-dark);
-    --bc-surface1: var(--bc-surface1-dark);
-    --bc-surface2: var(--bc-surface2-dark);
-    --bc-surface3: var(--bc-surface3-dark);
-    --bc-surface4: var(--bc-surface4-dark);
-    --bc-surface-shadow: var(--bc-surface-shadow-dark);
-    --bc-shadow-strength: var(--bc-shadow-strength-dark);
+    --brand: var(--bc-brand-dim);
+    --bc-accent1: var(--bc-accent1-dim);
+    --bc-accent2: var(--bc-accent2-dim);
+    --bc-text1: var(--bc-text1-dim);
+    --bc-text2: var(--bc-text2-dim);
+    --bc-surface1: var(--bc-surface1-dim);
+    --bc-surface2: var(--bc-surface2-dim);
+    --bc-surface3: var(--bc-surface3-dim);
+    --bc-surface4: var(--bc-surface4-dim);
+    --bc-surface-shadow: var(--bc-surface-shadow-dim);
+    --bc-shadow-strength: var(--bc-shadow-strength-dim);
 
-    --bc-info: hsl(203 var(--bc-brand-saturation-dark) 30%);
-    --bc-success: hsl(120 var(--bc-brand-saturation-dark) 30%);
-    --bc-warning: hsl(40 var(--bc-brand-saturation-dark) 30%);
-    --bc-error: hsl(2 var(--bc-brand-saturation-dark) 30%);
+    --bc-info: hsl(203 var(--bc-brand-saturation-dim) 30%);
+    --bc-success: hsl(120 var(--bc-brand-saturation-dim) 30%);
+    --bc-warning: hsl(40 var(--bc-brand-saturation-dim) 30%);
+    --bc-error: hsl(2 var(--bc-brand-saturation-dim) 30%);
   }
 }
 
@@ -114,8 +115,8 @@
   --font-serif: var(--bc-font-serif);
   --font-mono: var(--bc-font-mono);
 
-  --link: var(--brand);
-  --link-visited: var(--bc-accent2);
+  --link: var(--bc-brand);
+  --link-visited: var(--bc-accent1);
   --text-1: var(--bc-text1);
   --text2: var(--bc-text2);
   --surface-1: var(--bc-surface1);

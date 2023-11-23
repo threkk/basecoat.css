@@ -14,11 +14,11 @@
   --bc-font-header: var(--bc-font-serif);
 
   /* COLOURS */
-  /* Brand color: #8fbc8f == hsl(120, 25%, 65%) */
-  --bc-brand-hue: 120;
-  --bc-brand-saturation: 25%;
-  --bc-brand-lightness: 65%;
-  --bc-accent-offset: 30;
+  /* Brand color: Light sea gree == hsl(180, 66%, 38%) */
+  --bc-brand-hue: 180;
+  --bc-brand-saturation: 66%;
+  --bc-brand-lightness: 38%;
+  --bc-accent-offset: 120;
 
   /* COMPUTED VARIABLES */
   /* Do not touch unless you know what you are doing */
