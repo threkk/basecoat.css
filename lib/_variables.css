@@ -5,8 +5,7 @@
   /* Font family https://modernfontstacks.com/ */
   --bc-font-sans: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
     sans-serif; /* Geometric humanist */
-  --bc-font-serif: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
-    P052, Sylfaen, serif; /* Didone */
+  --bc-font-serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif; /* Transitional */
   --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
@@ -18,7 +17,7 @@
   --bc-brand-hue: 180;
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
-  --bc-accent-offset: 120;
+  --bc-accent-offset: 60;
 
   /* COMPUTED VARIABLES */
   /* Do not touch unless you know what you are doing */
@@ -62,12 +61,12 @@
   --bc-text1-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 95%);
   --bc-text2-dark: hsl(var(--bc-brand-hue) 5% 65%);
   --bc-accent1-dark: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
       var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
   );
 
   --bc-accent2-dark: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
       var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
   );
 
@@ -87,12 +86,12 @@
   --bc-text1-dim: hsl(var(--bc-brand-hue) 15% 75%);
   --bc-text2-dim: hsl(var(--bc-brand-hue) 10% 61%);
   --bc-accent1-dim: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
+    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
       var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
   );
 
   --bc-accent2-dim: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
+    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
       var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
   );
 
