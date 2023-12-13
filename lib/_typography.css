@@ -28,18 +28,35 @@
 }
 
 /* Links */
-:where(a) {
-  /* Switch the default behaviour. If we specify a link color, we use it instead of the brand */
+/* Switch the default behaviour. If we specify a link color, we use it instead of the brand */
+:where(a[href]) {
   color: var(--link, var(--brand));
+  text-decoration: underline solid;
 }
-:where(a:hover) {
-  text-decoration-style: solid;
-  text-underline-offset: 0.15em;
+
+:where(a[href]:hover) {
+  background-color: var(--link, var(--brand));
+  color: var(--bc-text1);
+}
+
+:where(a[href]):visited {
+  color: var(--link-visited, var(--brand));
+}
+
+:where(a[href]:hover):visited {
+  background-color: var(--link-visited, var(--brand));
+  color: var(--bc-text1);
 }
 
 /* https://datatracker.ietf.org/doc/html/rfc7992#section-5.2 */
-:where(a[href^="#"]:hover:after) {
+:where(a[href^="#"]):hover:after {
   content: " \00B6";
+}
+
+:where(a[href^="http"]):hover:after {
+  content: " [\2197]";
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-0);
 }
 
 /* Preformated */
