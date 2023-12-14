@@ -1,6 +1,7 @@
 :where(body) {
   font-family: var(--bc-font-body);
   font-size: var(--font-size-fluid-1);
+  letter-spacing: var(--font-letterspacing-2);
   line-height: var(--font-lineheight-4);
   orphans: 3;
   widows: 3;
@@ -11,8 +12,10 @@
   line-height: var(--font-lineheight-2);
   font-weight: var(--font-weight-5);
   letter-spacing: var(--font-letterspacing-3);
-  max-inline-size: var(--size-header-2);
+  /* max-inline-size: var(--size-header-2); */
   font-family: var(--bc-font-header);
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap */
+  text-wrap: balance; 
 }
 
 :where(
@@ -31,7 +34,9 @@
 /* Switch the default behaviour. If we specify a link color, we use it instead of the brand */
 :where(a[href]) {
   color: var(--link, var(--brand));
-  text-decoration: underline solid;
+  text-decoration: underline dashed;
+  text-decoration-thickness: 10%;
+  text-underline-offset: var(--size-1);
 }
 
 :where(a[href]:hover) {

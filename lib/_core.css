@@ -21,11 +21,37 @@
   border-style: none;
   aspect-ratio: var(--ratio-golden);
   border-radius: var(--radius-3);
+  margin: var(--size-3);
+  animation: var(--animation-fade-in-bloom) forwards;
 }
 
-/* Horizontal line */ 
+:where(figcaption) {
+  font-style: italic;
+}
+
+/* Horizontal line */
 :where(hr) {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, var(--bc-text2), var(--bc-brand), var(--bc-text2));
+  background-image: linear-gradient(
+    to right,
+    var(--bc-text2),
+    var(--bc-brand),
+    var(--bc-text2)
+  );
+}
+
+/* Inputs */
+:where(input) {
+  margin-top: var(--size-1);
+  margin-bottom: var(--size-1);
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* "Button" */
+:where(a[role="button"]) {
 }

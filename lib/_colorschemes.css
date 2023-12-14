@@ -151,20 +151,36 @@
   color: var(--bc-text1);
 }
 
-:where(.info) {
+:where(.info):not(input) {
   background-color: var(--bc-info);
 }
 
-:where(.success) {
+:where(.success):not(input) {
   background-color: var(--bc-success);
 }
 
-:where(.warning) {
+:where(.warning):not(input) {
   background-color: var(--bc-warning);
 }
 
-:where(.error) {
+:where(.error):not(input) {
   background-color: var(--bc-error);
+}
+
+:where(input.info) {
+  border: solid 2px var(--bc-info);
+}
+
+:where(input.success) {
+  border: solid 2px var(--bc-success);
+}
+
+:where(input.warning) {
+  border: solid 2px var(--bc-warning);
+}
+
+:where(input.error) {
+  border: solid 2px var(--bc-error);
 }
 
 :where(.shadow) {
