@@ -1,5 +1,8 @@
 * {
+  /* Additional CSS reset https://twitter.com/souporserious/status/1746378842787459501 */ 
   box-sizing: border-box;
+  position: relative;
+  min-width: 0;
   margin: 0;
 }
 
@@ -10,6 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: var(--size-fluid-3);
+  padding-bottom: var(--size-fuild-5);
 }
 
 body > * {

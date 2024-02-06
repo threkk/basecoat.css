@@ -1,10 +1,15 @@
 :where(body) {
+  min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--font-size-fluid-1);
   letter-spacing: var(--font-letterspacing-2);
   line-height: var(--font-lineheight-4);
   orphans: 3;
   widows: 3;
+}
+
+:where(p) {
+  text-wrap: pretty;
 }
 
 /* Headings */
@@ -40,8 +45,10 @@
 }
 
 :where(a[href]:hover) {
-  background-color: var(--link, var(--brand));
-  color: var(--bc-text1);
+  text-decoration-style: solid;
+  /* font-weight: var(--font-weight-6); */
+  /* background-color: var(--link, var(--brand)); */
+  /* color: var(--bc-text1); */
 }
 
 :where(a[href]):visited {
@@ -49,8 +56,10 @@
 }
 
 :where(a[href]:hover):visited {
-  background-color: var(--link-visited, var(--brand));
-  color: var(--bc-text1);
+  text-decoration-style: solid;
+  /* font-weight: var(--font-weight-6); */
+  /* background-color: var(--link-visited, var(--brand)); */
+  /* color: var(--bc-text1); */
 }
 
 /* https://datatracker.ietf.org/doc/html/rfc7992#section-5.2 */

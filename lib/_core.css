@@ -52,6 +52,12 @@
   margin-bottom: 0;
 }
 
-/* "Button" */
-:where(a[role="button"]) {
+/* List */
+:where(ul li) {
+  list-style: square;
+}
+
+/* Dialog */ 
+:where(dialog) {
+  margin: auto;
 }

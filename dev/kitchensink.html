@@ -59,6 +59,12 @@
             <li><a href="#forms__action">Action buttons</a></li>
           </ul>
         </li>
+        <li>
+          <a href="#components">Components</a>
+          <ul>
+            <li><a href="#components__dialog">Dialog</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
@@ -464,11 +470,29 @@ p q r s t u v w x y z { | } ~ </pre>
           </p>
           <br>
           <p class="buttons-list">
-            <a role="button">&lt;a role=button&gt;</a>
-            <a role="button" class="accent">&lt;a role=button class=accent&gt;</a>
+            <a role="button" class="btn">&lt;a role=button class=button&gt;</a>
           </p>
         </fieldset>
       </form>
+    </section>
+    <section id="components">
+      <header>
+        <h1>Components</h1>
+      </header>
+      <article id="components__dialog">
+        <header>
+          <h2>Dialog</h2>
+        </header>
+        <dialog id="component__dialog__dialog">
+          <p>A dialog component</p>
+          <form method="dialog">
+              <p><button autofocus>Close</button></p>
+          </form>
+        </dialog>
+          <p>
+            <button onclick="javascript:document.getElementById('component__dialog__dialog').showModal()">Show the dialog</button>
+          </p>
+      </article>
     </section>
   </main>
 </body>
