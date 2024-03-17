@@ -7,48 +7,48 @@
 }
 
 /* GENERAL */
-/* Container flow */
+/* Adapted document style: https://smolcss.dev/#smol-document-styles */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: var(--size-fluid-3);
-  padding-bottom: var(--size-fuild-5);
+  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
 }
 
 body > * {
-  /* max-width: var(--size-content-3); */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: min(100%, var(--bc-max-width));
+  width: 100%;
+  margin-inline: auto;
 }
 
 :where(main, header, footer) {
-  padding-top: var(--size-fluid-3);
-  margin: auto;
-  width: min(100%, var(--size-content-3));
+  padding-block: var(--bc-layout-spacing);
 }
 
 :where(
     main > * + *,
+    aside > * + *,
     section > * + *,
     article > * + *,
     header > * + *,
     footer > * + *
   ) {
-  margin-block-start: var(--size-fluid-2);
+  margin-block-start: var(--bc-element-spacing);
+}
+
+/* Grid container */
+:where(.grid) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bc-element-spacing);
+}
+
+:where(.grid > *) {
+  flex: 1 1 10ch;
 }
 
 /* Text containers */
 :where(p, blockquote, pre, table) {
   width: 100%;
   max-inline-size: unset;
-}
-
-:where(aside) {
-  width: var(--size-content-2);
-}
-
-/* Forms */
-:where(input + label) {
-  margin-inline-start: var(--size-fluid-1);
 }

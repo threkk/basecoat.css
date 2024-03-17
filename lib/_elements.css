@@ -19,7 +19,7 @@
   background-size: cover;
   shape-margin: 0.75rem;
   border-style: none;
-  aspect-ratio: var(--ratio-golden);
+  aspect-ratio: 1.6180/1; /* golden ratio */
   border-radius: var(--radius-3);
   margin: var(--size-3);
   animation: var(--animation-fade-in-bloom) forwards;

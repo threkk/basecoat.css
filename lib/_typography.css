@@ -1,9 +1,15 @@
+:root {
+  font-size: var(--bc-font-size);
+  line-height: 2;
+}
+
 :where(body) {
   min-height: 100dvh;
   font-family: var(--bc-font-body);
-  font-size: var(--font-size-fluid-1);
+  font-size: var(--bc-font-size);
+  /* font-size: var(--font-size-fluid-1); */
   letter-spacing: var(--font-letterspacing-2);
-  line-height: var(--font-lineheight-4);
+  /* line-height: 1rlh; */
   orphans: 3;
   widows: 3;
 }
@@ -14,7 +20,7 @@
 
 /* Headings */
 :where(h1, h2, h3, h4, h5, h6) {
-  line-height: var(--font-lineheight-2);
+  line-height: 1rlh;
   font-weight: var(--font-weight-5);
   letter-spacing: var(--font-letterspacing-3);
   /* max-inline-size: var(--size-header-2); */
@@ -111,3 +117,15 @@
   color: var(--bc-text1);
   background-color: var(--bc-error);
 }
+
+/* https://x.com/argyleink/status/1767765587827347500?s=20 */
+/* h1, h2, h3, h4, h5, h6, */
+/* dt, blockquote, figcaption { */
+/*   text-wrap: balance; */
+/*   max-inline-size: 25ch; */
+/* } */
+
+/* p, dd, li { */
+/*   text-wrap: pretty; */
+/*   max-inline-size: 60ch; */
+/* } */

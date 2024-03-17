@@ -9,6 +9,7 @@
   --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
+  --bc-font-size: calc(1rem + 0.25vw);
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
 
@@ -18,6 +19,10 @@
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
   --bc-accent-offset: 60;
+
+  --bc-max-width: 70ch;
+  --bc-layout-spacing: max(8vh, 3rem);
+  --bc-element-spacing: 1.2rem;
 
   /* COMPUTED VARIABLES */
   /* Do not touch unless you know what you are doing */
