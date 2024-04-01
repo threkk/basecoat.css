@@ -35,9 +35,9 @@
   height: 1px;
   background-image: linear-gradient(
     to right,
-    var(--bc-text2),
+    var(--bc-text),
     var(--bc-brand),
-    var(--bc-text2)
+    var(--bc-text)
   );
 }
 

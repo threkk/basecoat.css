@@ -7,7 +7,7 @@
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
-  letter-spacing: .025em;
+  letter-spacing: 0.025rem;
   orphans: 3;
   widows: 3;
 }
@@ -20,10 +20,30 @@
 :where(h1, h2, h3, h4, h5, h6) {
   line-height: 1rlh;
   font-weight: bolder;
-  letter-spacing: .05em;
+  letter-spacing: 0.25rem;
   max-inline-size: 25ch;
   font-family: var(--bc-font-header);
-  text-wrap: balance; 
+  text-wrap: balance;
+}
+
+/* Font sizes: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings */
+:where(h1) {
+  font-size: 2rem;
+}
+:where(h2) {
+  font-size: 1.5rem;
+}
+:where(h3) {
+  font-size: 1.17rem;
+}
+:where(h4) {
+  font-size: 1rem;
+}
+:where(h5) {
+  font-size: 0.83rem;
+}
+:where(h6) {
+  font-size: 0.67rem;
 }
 
 :where(
@@ -35,33 +55,52 @@
     h6[id^="section"]:before
   ) {
   content: "\00A7 ";
-  font-weight: var(--font-weight-3);
+  font-weight: lighter;
 }
 
 /* Links */
 :where(a[href]) {
-  color: var(--link, var(--brand));
+  color: var(--bc-link, var(--brand));
   text-decoration: underline solid;
   text-decoration-thickness: 5%;
   text-underline-offset: 0.25rem;
+
+  &::selection {
+    color: var(--bc-text1);
+  }
+  &:hover {
+    text-decoration-style: dashed;
+  }
+
+  &:visited {
+    color: color-mix(in srgb, 5% black, var(--brand));
+  }
 }
 
-:where(a[href])::selection {
-  color: var(--bc-text);
+/* List */
+:where(ul li) {
+  list-style: square;
 }
 
-:where(a[href]:hover) {
-  text-decoration-style: dashed;
+:where(ol li) {
+  list-style: lower-roman;
 }
 
-:where(a[href]):visited {
-  color: var(--brand);
+:where(dl) {
+  dt {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  dd {
+    font-size: 0.9rem;
+    margin-inline-start: 2.5rem;
+  }
 }
 
 /* Preformated */
 :where(pre > code) {
   font-family: var(--bc-font-mono);
-  box-shadow: var(--shadow-6);
+  box-shadow: var(--bc-shadow);
   page-break-inside: avoid;
   overflow-x: scroll;
 }
@@ -70,17 +109,31 @@
 :where(blockquote) {
   border-color: var(--bc-brand);
   background-color: var(--surface-3);
-  justify-self: flex-start;
+  box-shadow: var(--bc-shadow);
+  font-size: 0.9rem;
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+
+  border-image: linear-gradient(transparent, var(--bc-brand), transparent) 0 0 0
+    1 / 0.15rem;
+
+  cite {
+    font-style: italic;
+    margin-block-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
 }
 
 /* Abbreviatures */
 :where(abbr[title]) {
   text-decoration-style: dotted;
-  text-underline-offset: 0.15em;
+  text-underline-offset: 0.15rem;
   cursor: help;
 }
 
-/* Insert, delete, mark */ 
+/* Insert, delete, mark */
 :where(mark) {
   color: var(--bc-text1);
   background-color: var(--bc-warning);

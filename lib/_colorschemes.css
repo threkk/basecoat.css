@@ -105,9 +105,9 @@
   --font-serif: var(--bc-font-serif);
   --font-mono: var(--bc-font-mono);
 
-  --link: var(--bc-brand);
-  --text: var(--bc-text1);
-  --surface: var(--bc-surface1);
+  --bc-link: var(--bc-brand);
+  --bc-text: var(--bc-text1);
+  --bc-surface: var(--bc-surface1);
 
   --text-1: var(--bc-text1);
   --text-2: var(--bc-text2);
@@ -119,6 +119,18 @@
   --shadow-strength: var(--bc-shadow-strength);
   --scrollthumb-color: var(--brand);
   /* --border; */
+
+  --bc-shadow: 0 2.8px 2.2px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 6.7px 5.3px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.01)),
+    0 12.5px 10px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 22.3px 17.9px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 41.8px 33.4px
+      hsl(var(--bc-surface-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bc-surface-shadow) / var(--bc-shadow-strength));
 }
 
 /* SURFACES */
