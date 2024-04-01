@@ -7,9 +7,7 @@
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
-  /* font-size: var(--font-size-fluid-1); */
-  letter-spacing: var(--font-letterspacing-2);
-  /* line-height: 1rlh; */
+  letter-spacing: .025em;
   orphans: 3;
   widows: 3;
 }
@@ -21,11 +19,10 @@
 /* Headings */
 :where(h1, h2, h3, h4, h5, h6) {
   line-height: 1rlh;
-  font-weight: var(--font-weight-5);
-  letter-spacing: var(--font-letterspacing-3);
-  /* max-inline-size: var(--size-header-2); */
+  font-weight: bolder;
+  letter-spacing: .05em;
+  max-inline-size: 25ch;
   font-family: var(--bc-font-header);
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap */
   text-wrap: balance; 
 }
 
@@ -42,48 +39,29 @@
 }
 
 /* Links */
-/* Switch the default behaviour. If we specify a link color, we use it instead of the brand */
 :where(a[href]) {
   color: var(--link, var(--brand));
-  text-decoration: underline dashed;
-  text-decoration-thickness: 10%;
-  text-underline-offset: var(--size-1);
+  text-decoration: underline solid;
+  text-decoration-thickness: 5%;
+  text-underline-offset: 0.25rem;
+}
+
+:where(a[href])::selection {
+  color: var(--bc-text);
 }
 
 :where(a[href]:hover) {
-  text-decoration-style: solid;
-  /* font-weight: var(--font-weight-6); */
-  /* background-color: var(--link, var(--brand)); */
-  /* color: var(--bc-text1); */
+  text-decoration-style: dashed;
 }
 
 :where(a[href]):visited {
-  color: var(--link-visited, var(--brand));
-}
-
-:where(a[href]:hover):visited {
-  text-decoration-style: solid;
-  /* font-weight: var(--font-weight-6); */
-  /* background-color: var(--link-visited, var(--brand)); */
-  /* color: var(--bc-text1); */
-}
-
-/* https://datatracker.ietf.org/doc/html/rfc7992#section-5.2 */
-:where(a[href^="#"]):hover:after {
-  content: " \00B6";
-}
-
-:where(a[href^="http"]):hover:after {
-  content: " [\2197]";
-  font-weight: var(--font-weight-6);
-  font-size: var(--font-size-0);
+  color: var(--brand);
 }
 
 /* Preformated */
 :where(pre > code) {
   font-family: var(--bc-font-mono);
   box-shadow: var(--shadow-6);
-  font-size: var(--font-size-2);
   page-break-inside: avoid;
   overflow-x: scroll;
 }

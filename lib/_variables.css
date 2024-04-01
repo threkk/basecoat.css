@@ -18,7 +18,6 @@
   --bc-brand-hue: 180;
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
-  --bc-accent-offset: 60;
 
   --bc-max-width: 70ch;
   --bc-layout-spacing: max(8vh, 3rem);
@@ -42,14 +41,6 @@
   --bc-brand-light: var(--bc-brand);
   --bc-text1-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
   --bc-text2-light: hsl(var(--bc-brand-hue) 30% 30%);
-  --bc-accent1-light: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
-  --bc-accent2-light: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
-      var(--bc-brand-saturation) var(--bc-brand-lightness)
-  );
   --bc-surface1-light: hsl(var(--bc-brand-hue) 25% 90%);
   --bc-surface2-light: hsl(var(--bc-brand-hue) 20% 99%);
   --bc-surface3-light: hsl(var(--bc-brand-hue) 20% 92%);
@@ -65,15 +56,6 @@
   );
   --bc-text1-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 95%);
   --bc-text2-dark: hsl(var(--bc-brand-hue) 5% 65%);
-  --bc-accent1-dark: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
-      var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
-  );
-
-  --bc-accent2-dark: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
-      var(--bc-brand-saturation-dark) var(--bc-brand-lightness-dark)
-  );
 
   --bc-surface1-dark: hsl(var(--bc-brand-hue) 10% 10%);
   --bc-surface2-dark: hsl(var(--bc-brand-hue) 10% 15%);
@@ -90,15 +72,6 @@
   );
   --bc-text1-dim: hsl(var(--bc-brand-hue) 15% 75%);
   --bc-text2-dim: hsl(var(--bc-brand-hue) 10% 61%);
-  --bc-accent1-dim: hsl(
-    calc(var(--bc-brand-hue) - var(--bc-accent-offset))
-      var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
-  );
-
-  --bc-accent2-dim: hsl(
-    calc(var(--bc-brand-hue) + var(--bc-accent-offset))
-      var(--bc-brand-saturation-dim) var(--bc-brand-lightness-dim)
-  );
 
   --bc-surface1-dim: hsl(var(--bc-brand-hue) 10% 20%);
   --bc-surface2-dim: hsl(var(--bc-brand-hue) 10% 25%);

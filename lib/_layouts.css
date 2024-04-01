@@ -36,8 +36,8 @@ body > * {
   margin-block-start: var(--bc-element-spacing);
 }
 
-/* Grid container */
-:where(.grid) {
+/* Columns container */
+:where(.columns) {
   display: flex;
   flex-wrap: wrap;
   gap: var(--bc-element-spacing);

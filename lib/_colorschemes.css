@@ -4,8 +4,6 @@
   color-scheme: light;
 
   --brand: var(--bc-brand-light);
-  --bc-accent1: var(--bc-accent1-light);
-  --bc-accent2: var(--bc-accent2-light);
   --bc-text1: var(--bc-text1-light);
   --bc-text2: var(--bc-text2-light);
   --bc-surface1: var(--bc-surface1-light);
@@ -27,8 +25,6 @@
     color-scheme: dark;
 
     --brand: var(--bc-brand-dim);
-    --bc-accent1: var(--bc-accent1-dim);
-    --bc-accent2: var(--bc-accent2-dim);
     --bc-text1: var(--bc-text1-dim);
     --bc-text2: var(--bc-text2-dim);
     --bc-surface1: var(--bc-surface1-dim);
@@ -50,8 +46,6 @@
   color-scheme: light;
 
   --brand: var(--bc-brand-light);
-  --bc-accent1: var(--bc-accent1-light);
-  --bc-accent2: var(--bc-accent2-light);
   --bc-text1: var(--bc-text1-light);
   --bc-text2: var(--bc-text2-light);
   --bc-surface1: var(--bc-surface1-light);
@@ -71,8 +65,6 @@
   color-scheme: dark;
 
   --brand: var(--bc-brand-dark);
-  --bc-accent1: var(--bc-accent1-dark);
-  --bc-accent2: var(--bc-accent2-dark);
   --bc-text1: var(--bc-text1-dark);
   --bc-text2: var(--bc-text2-dark);
   --bc-surface1: var(--bc-surface1-dark);
@@ -91,8 +83,6 @@
   color-scheme: dark;
 
   --brand: var(--bc-brand-dim);
-  --bc-accent1: var(--bc-accent1-dim);
-  --bc-accent2: var(--bc-accent2-dim);
   --bc-text1: var(--bc-text1-dim);
   --bc-text2: var(--bc-text2-dim);
   --bc-surface1: var(--bc-surface1-dim);
@@ -116,7 +106,9 @@
   --font-mono: var(--bc-font-mono);
 
   --link: var(--bc-brand);
-  --link-visited: var(--bc-accent1);
+  --text: var(--bc-text1);
+  --surface: var(--bc-surface1);
+
   --text-1: var(--bc-text1);
   --text-2: var(--bc-text2);
   --surface-1: var(--bc-surface1);
