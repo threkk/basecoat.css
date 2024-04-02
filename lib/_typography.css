@@ -108,7 +108,8 @@
 /* Blockquote */
 :where(blockquote) {
   border-color: var(--bc-brand);
-  background-color: var(--surface-3);
+  background-color: var(--bc-surface3);
+  border-radius: var(--bc-radius);
   box-shadow: var(--bc-shadow);
   font-size: 0.9rem;
   padding-inline: 2rem;
@@ -147,6 +148,26 @@
 :where(del) {
   color: var(--bc-text1);
   background-color: var(--bc-error);
+}
+
+:where(details) {
+  background-color: var(--bc-surface3);
+  border-radius: var(--bc-radius);
+
+  summary {
+    padding-inline: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  &[open] > summary {
+    border-block-end: solid 1px var(--bc-text);
+  }
+
+  & > *:not(summary) {
+    padding-inline: 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* https://x.com/argyleink/status/1767765587827347500?s=20 */
