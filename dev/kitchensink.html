@@ -13,7 +13,7 @@
         --bc-brand-lightness: 38%;
       }
 
-      nav > ul{
+      nav > ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -21,17 +21,16 @@
 
       nav > ul > li {
         list-style-type: none;
-        margin: 0; 
+        margin: 0;
         padding: 0;
       }
       nav > ul > li > ul {
         display: none;
       }
-  
+
       nav > ul > li:hover > ul {
         display: block;
       }
-
     </style>
   </head>
 
@@ -58,11 +57,8 @@
               <li><a href="#embedded__images">Images</a></li>
               <li><a href="#embedded__audio">Audio</a></li>
               <li><a href="#embedded__video">Video</a></li>
-              <li><a href="#embedded__canvas">Canvas</a></li>
               <li><a href="#embedded__meter">Meter</a></li>
               <li><a href="#embedded__progress">Progress</a></li>
-              <li><a href="#embedded__svg">Inline SVG</a></li>
-              <li><a href="#embedded__iframe">IFrames</a></li>
             </ul>
           </li>
           <li>
@@ -160,64 +156,65 @@
         </article>
         <article id="text__hr">
           <h1>Horizontal rules</h1>
-
           <hr />
         </article>
         <article id="text__tables">
           <h1>Tabular data</h1>
-          <table>
-            <caption>
-              Table Caption
-            </caption>
-            <thead>
-              <tr>
-                <th>Table Heading 1</th>
-                <th>Table Heading 2</th>
-                <th>Table Heading 3</th>
-                <th>Table Heading 4</th>
-                <th>Table Heading 5</th>
-              </tr>
-            </thead>
-            <tfoot>
-              <tr>
-                <th>Table Footer 1</th>
-                <th>Table Footer 2</th>
-                <th>Table Footer 3</th>
-                <th>Table Footer 4</th>
-                <th>Table Footer 5</th>
-              </tr>
-            </tfoot>
-            <tbody>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-              <tr>
-                <td>Table Cell 1</td>
-                <td>Table Cell 2</td>
-                <td>Table Cell 3</td>
-                <td>Table Cell 4</td>
-                <td>Table Cell 5</td>
-              </tr>
-            </tbody>
-          </table>
+          <figure>
+            <table>
+              <caption>
+                Table Caption
+              </caption>
+              <thead>
+                <tr>
+                  <th>Table Heading 1</th>
+                  <th>Table Heading 2</th>
+                  <th>Table Heading 3</th>
+                  <th>Table Heading 4</th>
+                  <th>Table Heading 5</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Table Footer 1</th>
+                  <th>Table Footer 2</th>
+                  <th>Table Footer 3</th>
+                  <th>Table Footer 4</th>
+                  <th>Table Footer 5</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+                <tr>
+                  <td>Table Cell 1</td>
+                  <td>Table Cell 2</td>
+                  <td>Table Cell 3</td>
+                  <td>Table Cell 4</td>
+                  <td>Table Cell 5</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
         </article>
         <article id="text__code">
           <h1>Code</h1>
@@ -290,6 +287,7 @@ p q r s t u v w x y z { | } ~ </pre
             <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
           </p>
         </article>
+      </section>
       <section id="embedded">
         <h1>Embedded content</h1>
         <article id="embedded__images">
@@ -318,10 +316,6 @@ p q r s t u v w x y z { | } ~ </pre
           <h2>Video</h2>
           <video controls="" poster="image.png">video</video>
         </article>
-        <article id="embedded__canvas">
-          <h2>Canvas</h2>
-          <canvas>canvas</canvas>
-        </article>
         <article id="embedded__meter">
           <h2>Meter</h2>
           <meter value="2" min="0" max="10">2 out of 10</meter>
@@ -331,18 +325,6 @@ p q r s t u v w x y z { | } ~ </pre
 
           <progress indeterminate>progress</progress>
           <progress value=".5">progress</progress>
-        </article>
-        <article id="embedded__svg">
-          <h2>Inline SVG</h2>
-
-          <svg width="100px" height="100px">
-            <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
-          </svg>
-        </article>
-        <article id="embedded__iframe">
-          <h2>IFrame</h2>
-
-          <iframe src="./index_files/index.html" height="300"></iframe>
         </article>
       </section>
       <section id="forms">
