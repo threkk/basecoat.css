@@ -16,13 +16,14 @@ body {
 }
 
 body > * {
-  max-width: min(100%, var(--bc-max-width));
+  max-width: min(100%, var(--bc-max-width-long));
   width: 100%;
   margin-inline: auto;
 }
 
 :where(main, header, footer) {
   padding-block: var(--bc-layout-spacing);
+  position: relative;
 }
 
 :where(

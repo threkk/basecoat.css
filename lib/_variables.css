@@ -10,6 +10,7 @@
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
   --bc-font-size: calc(1rem + 0.25vw);
+  --bc-font-size-small: 0.9rem;
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
 
@@ -19,7 +20,8 @@
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
 
-  --bc-max-width: 70ch;
+  --bc-max-width-long: 70ch;
+  --bc-max-width-short: 25ch;
   --bc-layout-spacing: max(8vh, 3rem);
   --bc-element-spacing: 1.2rem;
   --bc-radius: 1rem;

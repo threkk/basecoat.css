@@ -7,6 +7,7 @@
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
+  background-color: var(--bc-surface1);
   letter-spacing: 0.025rem;
   orphans: 3;
   widows: 3;
@@ -92,7 +93,7 @@
     font-size: 1rem;
   }
   dd {
-    font-size: 0.9rem;
+    font-size: var(--bc-font-size-small);
     margin-inline-start: 2.5rem;
   }
 }
@@ -111,7 +112,7 @@
   background-color: var(--bc-surface3);
   border-radius: var(--bc-radius);
   box-shadow: var(--bc-shadow);
-  font-size: 0.9rem;
+  font-size: var(--bc-font-size-small);
   padding-inline: 2rem;
   padding-block: 1.5rem;
 
@@ -166,7 +167,62 @@
 
   & > *:not(summary) {
     padding-inline: 1rem;
-    font-size: 0.9rem;
+    font-size: var(--bc-font-size-small);
+  }
+}
+
+/* Tables */
+
+:where(figure) {
+  width: 100%;
+  display: block;
+  overflow-x: scroll;
+}
+
+:where(table) {
+  display: table;
+  overflow-x: scroll;
+  border-collapse: collapse;
+  border-radius: var(--bc-radius);
+  box-shadow: var(--bc-shadow);
+
+  caption {
+    caption-side: bottom;
+    font-size: var(--bc-font-size-small);
+    text-align: center; 
+    font-style: italic;
+    padding-block: 0.5rem;
+  }
+
+  thead, tbody, tfoot {
+    white-space: nowrap;
+  }
+
+  thead th, tfoot th {
+    background-color: var(--bc-surface3);
+  }
+
+  thead th:first-child {
+    border-start-start-radius: var(--bc-radius);
+  }
+  thead th:last-child {
+    border-start-end-radius: var(--bc-radius);
+  }
+
+  tfoot th:first-child {
+    border-end-start-radius: var(--bc-radius);
+  }
+  tfoot th:last-child {
+    border-end-end-radius: var(--bc-radius);
+  }
+
+  tbody td{
+    border: solid 1px var(--bc-surface3);
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: start;
   }
 }
 
