@@ -10,7 +10,15 @@
 
 /* Pictures */
 /* https://twitter.com/csswizardry/status/1717841334462005661?s=61&t=VLc-QmNqbQyNntAOtnu1qw */
-:where(img) {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+:where(img, video, audio) {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
@@ -19,14 +27,39 @@
   background-size: cover;
   shape-margin: 0.75rem;
   border-style: none;
-  aspect-ratio: 1.6180/1; /* golden ratio */
-  border-radius: var(--radius-3);
-  margin: var(--size-3);
-  animation: var(--animation-fade-in-bloom) forwards;
+  aspect-ratio: 1.618/1; /* golden ratio */
+  border-radius: var(--bc-radius);
+  margin: 0.5rem;
+  animation: fadeIn ease 2s forwards;
 }
 
-:where(figcaption) {
-  font-style: italic;
+:where(figure):has(img:only-of-type) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+:where(figure):has(img:not(:only-of-type)) {
+  display: flex;
+  border-radius: var(--bc-radius);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  & > img {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 min(100%, var(--bc-max-width-short));
+    aspect-ratio: 1.618/1;
+    height: auto;
+    object-fit: cover;
+  }
+
+  & > figcaption {
+    flex: 1 1 100%;
+  }
 }
 
 /* Horizontal line */
@@ -41,23 +74,18 @@
   );
 }
 
-/* Inputs */
-:where(input) {
-  margin-top: var(--size-1);
-  margin-bottom: var(--size-1);
-}
-
-:where(input[type="checkbox"], input[type="radio"]) {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /* List */
 :where(ul li) {
   list-style: square;
 }
 
-/* Dialog */ 
+/* Meter */ 
+/* Almost impossible to customise colors */
+:where(meter) {
+  width: 100%;
+}
+
+/* Dialog */
 :where(dialog) {
   margin: auto;
 }

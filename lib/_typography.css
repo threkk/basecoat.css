@@ -22,7 +22,7 @@
   line-height: 1rlh;
   font-weight: bolder;
   letter-spacing: 0.25rem;
-  max-inline-size: 25ch;
+  max-inline-size: var(--bc-max-width-short);
   font-family: var(--bc-font-header);
   text-wrap: balance;
 }
@@ -65,12 +65,14 @@
   text-decoration: underline solid;
   text-decoration-thickness: 5%;
   text-underline-offset: 0.25rem;
+  transition: text-decoration 1s ease-in-out;
 
   &::selection {
     color: var(--bc-text1);
   }
   &:hover {
     text-decoration-style: dashed;
+    transition: text-decoration 1s linear;
   }
 
   &:visited {
@@ -172,8 +174,7 @@
 }
 
 /* Tables */
-
-:where(figure) {
+:where(figure):has(table) {
   width: 100%;
   display: block;
   overflow-x: scroll;
@@ -184,21 +185,15 @@
   overflow-x: scroll;
   border-collapse: collapse;
   border-radius: var(--bc-radius);
-  box-shadow: var(--bc-shadow);
 
-  caption {
-    caption-side: bottom;
-    font-size: var(--bc-font-size-small);
-    text-align: center; 
-    font-style: italic;
-    padding-block: 0.5rem;
-  }
-
-  thead, tbody, tfoot {
+  thead,
+  tbody,
+  tfoot {
     white-space: nowrap;
   }
 
-  thead th, tfoot th {
+  thead th,
+  tfoot th {
     background-color: var(--bc-surface3);
   }
 
@@ -216,14 +211,84 @@
     border-end-end-radius: var(--bc-radius);
   }
 
-  tbody td{
+  tbody td {
     border: solid 1px var(--bc-surface3);
   }
 
-  th, td {
+  th,
+  td {
     padding: 1rem;
     text-align: start;
   }
+}
+
+/* Captions */
+:where(caption, figcaption) {
+  caption-side: bottom;
+  font-size: var(--bc-font-size-small);
+  text-align: center;
+  font-style: italic;
+  padding-block: 0.5rem;
+}
+
+/* Code */
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd */
+:where(kbd) {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-family: var(--bc-font-mono);
+  font-size: var(--bc-font-size-small);
+  font-weight: bolder;
+  line-height: 1;
+  padding: 0.1rem 0.2rem;
+  white-space: nowrap;
+}
+
+:where(code) {
+  display: inline-block;
+  border-radius: var(--bc-radius);
+  font-family: var(--bc-font-mono);
+  background-color: var(--bc-surface3);
+  padding-inline: 0.2rem;
+}
+
+:where(samp) {
+  font-weight: bold;
+  display: inline-block;
+  font-family: var(--bc-font-mono);
+}
+
+:where(pre),
+:where(pre > code) {
+  background-color: var(--bc-surface3);
+  border-radius: var(--bc-radius);
+  padding: 0.5rem;
+}
+
+/* Inline styles */
+:where(q) {
+  font-style: italic;
+
+  &::before {
+    content: "«";
+    font-style: italic;
+  }
+
+  &::after {
+    content: "»";
+    font-style: italic;
+  }
+}
+
+:where(var) {
+  font-style: italic;
+  font-weight: bold;
 }
 
 /* https://x.com/argyleink/status/1767765587827347500?s=20 */
