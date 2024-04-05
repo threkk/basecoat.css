@@ -63,6 +63,7 @@
 }
 
 /* Horizontal line */
+/* https://nerdy.dev/rad-border-image-css-one-liner */
 :where(hr) {
   border: 0;
   height: 1px;
@@ -79,10 +80,87 @@
   list-style: square;
 }
 
-/* Meter */ 
+/* Meter */
 /* Almost impossible to customise colors */
 :where(meter) {
+  width: min(var(--bc-max-width-short), 100%);
+}
+
+/* Progress bar */
+:where(progress) {
+  width: min(var(--bc-max-width-short), 100%);
+}
+
+/* Forms */
+/* https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ */
+:where(label) {
+  font-weight: bold;
+}
+:where(fieldset) {
+  border-color: var(--bc-text);
+  box-shadow: var(--bc-shadow);
+}
+:where(
+    input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])
+  ),
+:where(textarea) {
+  background-color: var(--bc-surface3);
+  border-radius: var(--bc-radius);
+  border-style: hidden;
+  display: inline-block;
+  font-size: 1rem;
+  height: 1.8rem;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  vertical-align: baseline;
   width: 100%;
+
+  &::placeholder {
+    opacity: 25%;
+    color: var(--bc-text);
+    font-style: italic;
+  }
+
+  &:disabled,
+  &:read-only {
+    cursor: not-allowed;
+  }
+
+  &.info {
+    border: dotted 0.15rem var(--bc-info);
+  }
+
+  &.success {
+    border: dotted 0.15rem var(--bc-success);
+  }
+
+  &.warning,
+  &:required {
+    border: dotted 0.15rem var(--bc-warning);
+  }
+
+  &.error,
+  &:user-invalid {
+    border: dotted 0.15rem var(--bc-error);
+  }
+}
+
+:where(input[type="search"]) {
+  border-radius: 2rem;
+  padding-inline: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-x: 0.5rem;
+  background-position-y: center;
+}
+
+:where(textarea) {
+  height: 100%;
+  resize: vertical;
+}
+
+:where(ul li):has(input) {
+  list-style: none;
 }
 
 /* Dialog */
