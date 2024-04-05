@@ -1,0 +1,26 @@
+/* Code block */
+:where(pre):has(code) {
+  counter-reset: line;
+  line-height: 1.5rem;
+
+  & > code {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  & > code:not(:only-of-type) {
+    counter-increment: line;
+    &:before {
+      color: color-mix(in srgb, black 10%, var(--bc-text));
+      content: counter(line);
+      font-family: var(--bc-font-mono);
+      font-size: 0.8rem;
+      padding-inline-end: 0.8rem;
+      user-select: none;
+      vertical-align: middle;
+    }
+  }
+}
