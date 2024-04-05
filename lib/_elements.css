@@ -100,10 +100,7 @@
   border-color: var(--bc-text);
   box-shadow: var(--bc-shadow);
 }
-:where(
-    input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])
-  ),
-:where(textarea) {
+:where(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   background-color: var(--bc-surface3);
   border-radius: var(--bc-radius);
   border-style: hidden;
@@ -122,7 +119,15 @@
   }
 
   &:disabled,
-  &:read-only {
+  &:read-only:not(
+      select,
+      [type="button"],
+      [type="reset"],
+      [type="submit"],
+      [type="file"],
+      [type="color"],
+      [type="range"]
+    ) {
     cursor: not-allowed;
   }
 
