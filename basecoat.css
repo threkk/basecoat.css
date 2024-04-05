@@ -1,6 +1,7 @@
-@import './lib/_layouts.css';
-@import './lib/_elements.css';
-@import './lib/_utilities.css';
-@import './lib/_typography.css';
-@import './lib/_variables.css';
-@import './lib/_colorschemes.css';
+@import "./lib/_layouts.css";
+@import "./lib/_elements.css";
+@import "./lib/components/_codeblock.css";
+@import "./lib/_utilities.css";
+@import "./lib/_typography.css";
+@import "./lib/_variables.css";
+@import "./lib/colorschemes/_colorschemes.css";

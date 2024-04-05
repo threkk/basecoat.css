@@ -264,8 +264,7 @@
   font-family: var(--bc-font-mono);
 }
 
-:where(pre),
-:where(pre > code) {
+:where(pre) {
   background-color: var(--bc-surface3);
   border-radius: var(--bc-radius);
   padding: 0.5rem;
