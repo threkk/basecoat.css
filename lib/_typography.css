@@ -63,16 +63,16 @@
 :where(a[href]) {
   color: var(--bc-link, var(--brand));
   text-decoration: underline solid;
+  text-decoration-color: transparent;
   text-decoration-thickness: 5%;
   text-underline-offset: 0.25rem;
-  transition: text-decoration 1s ease-in-out;
+  transition: text-decoration-color 145ms ease-in-out;
 
   &::selection {
     color: var(--bc-text1);
   }
   &:hover {
-    text-decoration-style: dashed;
-    transition: text-decoration 1s linear;
+    text-decoration-color: var(--bc-link, var(--brand));
   }
 
   &:visited {

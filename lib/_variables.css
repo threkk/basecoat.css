@@ -9,6 +9,8 @@
   --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
+
+  /* https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/ */
   --bc-font-size: calc(1rem + 0.25vw);
   --bc-font-size-small: 0.9rem;
   --bc-font-body: var(--bc-font-sans);

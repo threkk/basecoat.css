@@ -168,6 +168,110 @@
   list-style: none;
 }
 
+:where(ul):has(input[type="checkbox"], input[type="radio"]) {
+  margin: 0;
+  padding: 0;
+}
+:where(input[type="checkbox"], input[type="radio"]) {
+  width: 1rem;
+  height: 1rem;
+  margin-inline: 0.5rem;
+}
+
+/* Buttons */
+:where(
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    input[type="file"],
+    button
+  ),
+:where(a[role="button"]),
+:where(input[type="file"])::file-selector-button {
+  background-color: var(--bc-surface3);
+  border-color: var(--bc-text);
+  border-radius: var(--bc-radius);
+  border-style: 2px solid;
+  border-style: hidden;
+  box-shadow: var(--bc-shadow);
+  cursor: pointer;
+  font-size: 1rem;
+  gap: 1ch;
+  height: 1.8rem;
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  touch-action: manipulation;
+  transition: border 145ms ease;
+  user-select: none;
+  vertical-align: baseline;
+  width: 100%;
+
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+
+  &:is([type="submit"]):not(:disabled) {
+    background-color: var(--bc-brand);
+  }
+
+  &:is([type="reset"]):not(:disabled) {
+    color: var(--bc-warning);
+    background-color: var(--bc-surface1);
+    border-style: solid;
+    border-color: var(--bc-warning);
+    &:is(:hover, :focus) {
+      border: 3px solid;
+    }
+  }
+
+  &:is(input[type="file"]) {
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    width: 100%;
+
+    &::file-selector-button {
+      width: initial;
+      height: 100%;
+      font-size: var(--bc-font-size-small);
+      padding-block: 0;
+      display: inline-block;
+      background-color: var(--bc-brand);
+      box-shadow: none;
+    }
+  }
+
+  &:is(:disabled) {
+    color: var(--bc-text);
+    background-color: var(--bc-surface1);
+    border-style: solid;
+    border-color: var(--bc-text);
+    cursor: not-allowed;
+  }
+
+  &:is(:hover, :focus):not([type="file"]) {
+    border: 2px solid;
+    outline-offset: 0.25rem;
+  }
+}
+
+:is(input[type="file"]) {
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  width: 100%;
+
+  &::file-selector-button {
+    width: initial;
+    height: 100%;
+    font-size: var(--bc-font-size-small);
+    padding-block: 0;
+    display: inline-block;
+    background-color: var(--bc-brand);
+    box-shadow: none;
+  }
+}
 /* Dialog */
 :where(dialog) {
   margin: auto;
