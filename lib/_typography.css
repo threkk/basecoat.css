@@ -7,7 +7,7 @@
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
-  color: var(--bg-fg);
+  color: var(--bc-fg);
   background-color: var(--bc-bg-main);
   letter-spacing: 0.025rem;
   orphans: 3;
@@ -15,7 +15,7 @@
 }
 
 :where(p) {
-  fg-wrap: pretty;
+  text-wrap: pretty;
 }
 
 /* Headings */
@@ -25,7 +25,7 @@
   letter-spacing: 0.25rem;
   max-inline-size: var(--bc-max-width-short);
   font-family: var(--bc-font-header);
-  fg-wrap: balance;
+  text-wrap: balance;
 }
 
 /* Font sizes: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings */
@@ -67,10 +67,10 @@
   text-decoration-color: transparent;
   text-decoration-thickness: 5%;
   text-underline-offset: 0.25rem;
-  transition: fg-decoration-color 145ms ease-in-out;
+  transition: text-decoration-color 145ms ease-in-out;
 
   &::selection {
-    color: var(--bc-fg-main);
+    color: var(--bc-text-main);
   }
   &:hover {
     text-decoration-color: var(--bc-link, var(--bc-brand));
@@ -186,6 +186,8 @@
   overflow-x: scroll;
   border-collapse: collapse;
   border-radius: var(--bc-radius);
+  color: var(--bc-fg);
+  background-color: var(--bc-bg-main);
 
   thead,
   tbody,

@@ -12,53 +12,31 @@
     --bc-bg-shadow: var(--bc-bg-shadow-light);
     --bc-shadow-strength: var(--bc-shadow-strength-light);
 
-    /* Default scheme */
-    --bc-fg: var(--bc-fg2);
-    --bc-bg-main: var(--bc-bg2);
-    --bc-bg-alt: var(--bc-bg1);
-
-    /* Loosely based on https://unifyned.com/colors.html */
-    --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
-    --bc-success: hsl(120 var(--bc-brand-saturation) 75%);
-    --bc-warning: hsl(40 var(--bc-brand-saturation) 75%);
-    --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
-  }
-
-  .alternative {
-    --bc-fg: var(--bc-fg1);
-    --bc-bg-main: var(--bc-bg3);
-    --bc-bg-alt: var(--bc-bg4);
+    --bc-info: var(--bc-info-light);
+    --bc-success: var(--bc-success-light);
+    --bc-warning: var(--bc-warning-light);
+    --bc-error: var(--bc-error-light);
   }
 }
-/* Dim */
+
 /* Default color scheme when dark is dimmed dark rather than true dark */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
 
-    --bc-brand: var(--bc-brand-dim);
-    --bc-fg1: var(--bc-fg1-dim);
-    --bc-fg2: var(--bc-fg2-dim);
-    --bc-bg1: var(--bc-bg1-dim);
-    --bc-bg2: var(--bc-bg2-dim);
-    --bc-bg3: var(--bc-bg3-dim);
-    --bc-bg4: var(--bc-bg4-dim);
-    --bc-bg-shadow: var(--bc-bg-shadow-dim);
-    --bc-shadow-strength: var(--bc-shadow-strength-dim);
+    --bc-brand: var(--bc-brand-dim, var(--bc-brand-dark));
+    --bc-fg1: var(--bc-fg1-dim, var(--bc-fg1-dark));
+    --bc-fg2: var(--bc-fg2-dim, var(--bc-fg2-dark));
+    --bc-bg1: var(--bc-bg1-dim, var(--bc-bg1-dark));
+    --bc-bg2: var(--bc-bg2-dim, var(--bc-bg2-dark));
+    --bc-bg3: var(--bc-bg3-dim, var(--bc-bg3-dark));
+    --bc-bg4: var(--bc-bg4-dim, var(--bc-bg4-dark));
+    --bc-bg-shadow: var(--bc-bg-shadow-dim, var(--bc-bg-shadow-dark));
+    --bc-shadow-strength: var(--bc-shadow-strength-dim, var(--bc-shadow-strength-dark));
 
-    /* Default scheme */
-    --bc-fg: var(--bc-fg2);
-    --bc-bg-main: var(--bc-bg1);
-    --bc-bg-alt: var(--bc-bg2);
-
-    --bc-info: hsl(203 var(--bc-brand-saturation-dim) 30%);
-    --bc-success: hsl(120 var(--bc-brand-saturation-dim) 30%);
-    --bc-warning: hsl(40 var(--bc-brand-saturation-dim) 30%);
-    --bc-error: hsl(2 var(--bc-brand-saturation-dim) 30%);
-  }
-  .alternative {
-    --bc-fg: var(--bc-fg1);
-    --bc-bg-main: var(--bc-bg3);
-    --bc-bg-alt: var(--bc-bg4);
+    --bc-info: var(--bc-info-dim);
+    --bc-success: var(--bc-success-dim);
+    --bc-warning: var(--bc-warning-dim);
+    --bc-error: var(--bc-error-dim);
   }
 }

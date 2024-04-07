@@ -1,7 +1,6 @@
 * {
   scroll-behavior: smooth;
   accent-color: var(--bc-brand);
-  color-scheme: dark light;
 }
 
 ::selection {
@@ -92,7 +91,7 @@
 }
 
 /* Forms */
-/* https://moderncss.dev/custom-css-styles-for-form-inputs-and-fgareas/ */
+/* https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ */
 :where(label) {
   font-weight: bold;
   padding-inline: 0.5rem;
@@ -101,10 +100,11 @@
   border-color: var(--bc-fg);
   box-shadow: var(--bc-shadow);
 }
-:where(input:not([type="checkbox"], [type="radio"]), fgarea, select) {
+:where(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   background-color: var(--bc-bg-alt);
   border-radius: var(--bc-radius);
   border-style: hidden;
+  color: var(--bc-fg);
   display: inline-block;
   font-size: 1rem;
   height: 1.8rem;
@@ -160,7 +160,7 @@
   background-position-y: center;
 }
 
-:where(fgarea) {
+:where(textarea) {
   height: 100%;
   resize: vertical;
 }
@@ -196,6 +196,7 @@
   border-style: 2px solid;
   border-style: hidden;
   box-shadow: var(--bc-shadow);
+  color: var(--bc-fg);
   cursor: pointer;
   font-size: 1rem;
   gap: 1ch;
@@ -211,7 +212,7 @@
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  fg-align: center;
+  text-align: center;
 
   &:is([type="submit"]):not(:disabled) {
     background-color: var(--bc-brand);
@@ -230,7 +231,7 @@
   &:is(input[type="file"]) {
     align-items: start;
     justify-content: start;
-    fg-align: start;
+    text-align: start;
     width: 100%;
 
     &::file-selector-button {
@@ -261,7 +262,7 @@
 :is(input[type="file"]) {
   align-items: start;
   justify-content: start;
-  fg-align: start;
+  text-align: start;
   width: 100%;
 
   &::file-selector-button {

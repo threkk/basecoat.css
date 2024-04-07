@@ -25,10 +25,6 @@
         padding: 0;
       }
       nav > ul > li > ul {
-        display: none;
-      }
-
-      nav > ul > li:hover > ul {
         display: block;
       }
     </style>
@@ -36,6 +32,48 @@
 
   <body>
     <header>
+      <h1>Colour schemes</h1>
+      <fieldset>
+        <legend>Theme</legend>
+        <div class="columns">
+          <p>
+            <label for="brand">Brand:</label>
+            <input type="color" name="brand" id="brand" value="#21A0A0" />
+            <input type="checkbox" name="alternative" id="alternative" />
+            <label for="alternative">Alternative scheme </label>
+          </p>
+          <ul>
+            <li>
+              <input
+                type="radio"
+                name="theme"
+                id="auto"
+                value="auto"
+                checked="true"
+              /><label for="auto">Auto</label>
+            </li>
+            <li>
+              <input type="radio" name="theme" id="light" value="light" /><label
+                for="light"
+                >Light</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="theme" id="dim" value="dim" /><label
+                for="dim"
+                >Dim</label
+              >
+            </li>
+            <li>
+              <input type="radio" name="theme" id="dark" value="dark" /><label
+                for="dark"
+                >Dark</label
+              >
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+
       <nav role="navigation">
         <ul>
           <li>
@@ -500,7 +538,12 @@ p q r s t u v w x y z { | } ~ </pre
               </li>
               <li>
                 <label for="checkbox3"
-                  ><input id="checkbox3" name="checkbox" type="checkbox" disabled />
+                  ><input
+                    id="checkbox3"
+                    name="checkbox"
+                    type="checkbox"
+                    disabled
+                  />
                   Choice C</label
                 >
               </li>
@@ -529,7 +572,13 @@ p q r s t u v w x y z { | } ~ </pre
               </li>
               <li>
                 <label for="radio3"
-                  ><input id="radio3" name="radio" type="radio" class="radio" disabled />
+                  ><input
+                    id="radio3"
+                    name="radio"
+                    type="radio"
+                    class="radio"
+                    disabled
+                  />
                   Option 3</label
                 >
               </li>
@@ -595,4 +644,5 @@ p q r s t u v w x y z { | } ~ </pre
     </main>
   </body>
   <script type="text/javascript" src="./reload.js"></script>
+  <script type="text/javascript" src="./colour.js"></script>
 </html>

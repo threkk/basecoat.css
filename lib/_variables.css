@@ -21,9 +21,48 @@
   --bc-element-spacing: 1.2rem;
   --bc-radius: 0.5rem;
 
-  /* COLOURS */
   /* Brand color: Light sea gree == hsl(180, 66%, 38%) */
   --bc-brand-hue: 180;
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
+  --bc-brand: hsl(
+    var(--bc-brand-hue),
+    var(--bc-brand-saturation),
+    var(--bc-brand-lightness)
+  );
+
+  /* fg1 matches well with bg3 and bg4 */
+  /* fg2 matches well with bg1 and bg2 */
+  --bc-fg1: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
+  --bc-fg2: hsl(var(--bc-brand-hue) 30% 30%);
+  --bc-bg1: hsl(var(--bc-brand-hue) 25% 90%);
+  --bc-bg2: hsl(var(--bc-brand-hue) 20% 99%);
+  --bc-bg3: hsl(var(--bc-brand-hue) 20% 92%);
+  --bc-bg4: hsl(var(--bc-brand-hue) 20% 85%);
+
+  --bc-bg-shadow: var(--bc-brand-hue) 10% 20%;
+  --bc-shadow-strength: 0.02;
+
+  --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
+  --bc-success: hsl(120 var(--bc-brand-saturation) 75%);
+  --bc-warning: hsl(40 var(--bc-brand-saturation) 75%);
+  --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
+
+  /* Semantic variables */
+  --bc-fg: var(--bc-fg2);
+  --bc-bg-main: var(--bc-bg2);
+  --bc-bg-alt: var(--bc-bg1);
+
+  --bc-link: var(--bc-brand);
+  --bc-shadow: 0 2.8px 2.2px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 6.7px 5.3px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.01)),
+    0 12.5px 10px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 22.3px 17.9px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 41.8px 33.4px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bc-bg-shadow) / var(--bc-shadow-strength));
 }
