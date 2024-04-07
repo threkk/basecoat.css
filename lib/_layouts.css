@@ -44,7 +44,7 @@ body > * {
   gap: var(--bc-element-spacing);
 }
 
-:where(.grid > *) {
+:where(.columns > *) {
   flex: 1 1 10ch;
 }
 

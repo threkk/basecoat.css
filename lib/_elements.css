@@ -69,9 +69,9 @@
   height: 1px;
   background-image: linear-gradient(
     to right,
-    var(--bc-text),
+    var(--bc-fg),
     var(--bc-brand),
-    var(--bc-text)
+    var(--bc-fg)
   );
 }
 
@@ -92,16 +92,17 @@
 }
 
 /* Forms */
-/* https://moderncss.dev/custom-css-styles-for-form-inputs-and-textareas/ */
+/* https://moderncss.dev/custom-css-styles-for-form-inputs-and-fgareas/ */
 :where(label) {
   font-weight: bold;
+  padding-inline: 0.5rem;
 }
 :where(fieldset) {
-  border-color: var(--bc-text);
+  border-color: var(--bc-fg);
   box-shadow: var(--bc-shadow);
 }
-:where(input:not([type="checkbox"], [type="radio"]), textarea, select) {
-  background-color: var(--bc-surface3);
+:where(input:not([type="checkbox"], [type="radio"]), fgarea, select) {
+  background-color: var(--bc-bg-alt);
   border-radius: var(--bc-radius);
   border-style: hidden;
   display: inline-block;
@@ -114,7 +115,7 @@
 
   &::placeholder {
     opacity: 25%;
-    color: var(--bc-text);
+    color: var(--bc-fg);
     font-style: italic;
   }
 
@@ -159,7 +160,7 @@
   background-position-y: center;
 }
 
-:where(textarea) {
+:where(fgarea) {
   height: 100%;
   resize: vertical;
 }
@@ -179,6 +180,7 @@
 }
 
 /* Buttons */
+/* https://web.dev/articles/building/a-button-component */
 :where(
     input[type="button"],
     input[type="reset"],
@@ -188,8 +190,8 @@
   ),
 :where(a[role="button"]),
 :where(input[type="file"])::file-selector-button {
-  background-color: var(--bc-surface3);
-  border-color: var(--bc-text);
+  background-color: var(--bc-bg-alt);
+  border-color: var(--bc-fg);
   border-radius: var(--bc-radius);
   border-style: 2px solid;
   border-style: hidden;
@@ -209,7 +211,7 @@
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  text-align: center;
+  fg-align: center;
 
   &:is([type="submit"]):not(:disabled) {
     background-color: var(--bc-brand);
@@ -217,7 +219,7 @@
 
   &:is([type="reset"]):not(:disabled) {
     color: var(--bc-warning);
-    background-color: var(--bc-surface1);
+    background-color: var(--bc-bg-main);
     border-style: solid;
     border-color: var(--bc-warning);
     &:is(:hover, :focus) {
@@ -228,7 +230,7 @@
   &:is(input[type="file"]) {
     align-items: start;
     justify-content: start;
-    text-align: start;
+    fg-align: start;
     width: 100%;
 
     &::file-selector-button {
@@ -243,10 +245,10 @@
   }
 
   &:is(:disabled) {
-    color: var(--bc-text);
-    background-color: var(--bc-surface1);
+    color: var(--bc-fg);
+    background-color: var(--bc-bg-main);
     border-style: solid;
-    border-color: var(--bc-text);
+    border-color: var(--bc-fg);
     cursor: not-allowed;
   }
 
@@ -259,7 +261,7 @@
 :is(input[type="file"]) {
   align-items: start;
   justify-content: start;
-  text-align: start;
+  fg-align: start;
   width: 100%;
 
   &::file-selector-button {

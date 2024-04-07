@@ -7,14 +7,15 @@
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
-  background-color: var(--bc-surface1);
+  color: var(--bg-fg);
+  background-color: var(--bc-bg-main);
   letter-spacing: 0.025rem;
   orphans: 3;
   widows: 3;
 }
 
 :where(p) {
-  text-wrap: pretty;
+  fg-wrap: pretty;
 }
 
 /* Headings */
@@ -24,7 +25,7 @@
   letter-spacing: 0.25rem;
   max-inline-size: var(--bc-max-width-short);
   font-family: var(--bc-font-header);
-  text-wrap: balance;
+  fg-wrap: balance;
 }
 
 /* Font sizes: https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings */
@@ -61,22 +62,22 @@
 
 /* Links */
 :where(a[href]) {
-  color: var(--bc-link, var(--brand));
+  color: var(--bc-link, var(--bc-brand));
   text-decoration: underline solid;
   text-decoration-color: transparent;
   text-decoration-thickness: 5%;
   text-underline-offset: 0.25rem;
-  transition: text-decoration-color 145ms ease-in-out;
+  transition: fg-decoration-color 145ms ease-in-out;
 
   &::selection {
-    color: var(--bc-text1);
+    color: var(--bc-fg-main);
   }
   &:hover {
-    text-decoration-color: var(--bc-link, var(--brand));
+    text-decoration-color: var(--bc-link, var(--bc-brand));
   }
 
   &:visited {
-    color: color-mix(in srgb, 5% black, var(--brand));
+    color: color-mix(in srgb, 5% black, var(--bc-brand));
   }
 }
 
@@ -111,7 +112,7 @@
 /* Blockquote */
 :where(blockquote) {
   border-color: var(--bc-brand);
-  background-color: var(--bc-surface3);
+  background-color: var(--bc-bg-alt);
   border-radius: var(--bc-radius);
   box-shadow: var(--bc-shadow);
   font-size: var(--bc-font-size-small);
@@ -139,22 +140,22 @@
 
 /* Insert, delete, mark */
 :where(mark) {
-  color: var(--bc-text1);
+  color: var(--bc-fg1);
   background-color: var(--bc-warning);
 }
 
 :where(ins) {
-  color: var(--bc-text1);
+  color: var(--bc-fg1);
   background-color: var(--bc-success);
 }
 
 :where(del) {
-  color: var(--bc-text1);
+  color: var(--bc-fg1);
   background-color: var(--bc-error);
 }
 
 :where(details) {
-  background-color: var(--bc-surface3);
+  background-color: var(--bc-bg-alt);
   border-radius: var(--bc-radius);
 
   summary {
@@ -164,7 +165,7 @@
   }
 
   &[open] > summary {
-    border-block-end: solid 1px var(--bc-text);
+    border-block-end: solid 1px var(--bc-fg);
   }
 
   & > *:not(summary) {
@@ -194,7 +195,7 @@
 
   thead th,
   tfoot th {
-    background-color: var(--bc-surface3);
+    background-color: var(--bc-bg-alt);
   }
 
   thead th:first-child {
@@ -212,7 +213,7 @@
   }
 
   tbody td {
-    border: solid 1px var(--bc-surface3);
+    border: solid 1px var(--bc-bg-alt);
   }
 
   th,
@@ -254,7 +255,7 @@
   display: inline-block;
   border-radius: var(--bc-radius);
   font-family: var(--bc-font-mono);
-  background-color: var(--bc-surface3);
+  background-color: var(--bc-bg-alt);
   padding-inline: 0.2rem;
 }
 
@@ -265,7 +266,7 @@
 }
 
 :where(pre) {
-  background-color: var(--bc-surface3);
+  background-color: var(--bc-bg-alt);
   border-radius: var(--bc-radius);
   padding: 0.5rem;
 }
@@ -289,15 +290,3 @@
   font-style: italic;
   font-weight: bold;
 }
-
-/* https://x.com/argyleink/status/1767765587827347500?s=20 */
-/* h1, h2, h3, h4, h5, h6, */
-/* dt, blockquote, figcaption { */
-/*   text-wrap: balance; */
-/*   max-inline-size: 25ch; */
-/* } */
-
-/* p, dd, li { */
-/*   text-wrap: pretty; */
-/*   max-inline-size: 60ch; */
-/* } */

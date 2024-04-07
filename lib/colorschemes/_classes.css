@@ -1,0 +1,73 @@
+/* Other variables */
+:where(:root) {
+  --bc-link: var(--bc-brand);
+  --bc-shadow: 0 2.8px 2.2px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 6.7px 5.3px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.01)),
+    0 12.5px 10px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 22.3px 17.9px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+    0 41.8px 33.4px
+      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bc-bg-shadow) / var(--bc-shadow-strength));
+}
+
+/* Class combinations */
+/* From https://web.dev/articles/building/a-color-scheme#accessible_colors */
+:where(.scheme-1) {
+  background-color: var(--bc-bg1);
+  color: var(--bc-fg2);
+}
+
+:where(.scheme-2) {
+  background-color: var(--bc-bg2);
+  color: var(--bc-fg2);
+}
+
+:where(.scheme-3) {
+  background-color: var(--bc-bg3);
+  color: var(--bc-fg1);
+}
+
+:where(.scheme-4) {
+  background-color: var(--bc-bg4);
+  color: var(--bc-fg1);
+}
+
+:where(.info):not(input) {
+  background-color: var(--bc-info);
+}
+
+:where(.success):not(input) {
+  background-color: var(--bc-success);
+}
+
+:where(.warning):not(input) {
+  background-color: var(--bc-warning);
+}
+
+:where(.error):not(input) {
+  background-color: var(--bc-error);
+}
+
+:where(input.info) {
+  border: solid 2px var(--bc-info);
+}
+
+:where(input.success) {
+  border: solid 2px var(--bc-success);
+}
+
+:where(input.warning) {
+  border: solid 2px var(--bc-warning);
+}
+
+:where(input.error) {
+  border: solid 2px var(--bc-error);
+}
+
+:where(.shadow) {
+  box-shadow: var(--bc-shadow);
+}

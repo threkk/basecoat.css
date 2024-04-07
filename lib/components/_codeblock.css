@@ -14,7 +14,7 @@
   & > code:not(:only-of-type) {
     counter-increment: line;
     &:before {
-      color: color-mix(in srgb, black 10%, var(--bc-text));
+      color: color-mix(in srgb, black 10%, var(--bc-fg));
       content: counter(line);
       font-family: var(--bc-font-mono);
       font-size: 0.8rem;
