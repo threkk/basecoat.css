@@ -70,7 +70,7 @@
   transition: text-decoration-color 145ms ease-in-out;
 
   &::selection {
-    color: var(--bc-text-main);
+    color: var(--bc-fg);
   }
   &:hover {
     text-decoration-color: var(--bc-link, var(--bc-brand));

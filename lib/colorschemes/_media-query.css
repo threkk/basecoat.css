@@ -3,12 +3,9 @@
     color-scheme: light;
 
     --bc-brand: var(--bc-brand-light);
-    --bc-fg1: var(--bc-fg1-light);
-    --bc-fg2: var(--bc-fg2-light);
-    --bc-bg1: var(--bc-bg1-light);
-    --bc-bg2: var(--bc-bg2-light);
-    --bc-bg3: var(--bc-bg3-light);
-    --bc-bg4: var(--bc-bg4-light);
+    --bc-fg: var(--bc-fg-light);
+    --bc-bg-main: var(--bc-bg-main-light);
+    --bc-bg-alt: var(--bc-bg-alt-light);
     --bc-bg-shadow: var(--bc-bg-shadow-light);
     --bc-shadow-strength: var(--bc-shadow-strength-light);
 
@@ -25,12 +22,9 @@
     color-scheme: dark;
 
     --bc-brand: var(--bc-brand-dim, var(--bc-brand-dark));
-    --bc-fg1: var(--bc-fg1-dim, var(--bc-fg1-dark));
-    --bc-fg2: var(--bc-fg2-dim, var(--bc-fg2-dark));
-    --bc-bg1: var(--bc-bg1-dim, var(--bc-bg1-dark));
-    --bc-bg2: var(--bc-bg2-dim, var(--bc-bg2-dark));
-    --bc-bg3: var(--bc-bg3-dim, var(--bc-bg3-dark));
-    --bc-bg4: var(--bc-bg4-dim, var(--bc-bg4-dark));
+    --bc-fg: var(--bc-fg-dim, var(--bc-fg-dark));
+    --bc-bg-main: var(--bc-bg-main-dim, var(--bc-bg-main-dark));
+    --bc-bg-alt: var(--bc-bg-alt-dim, var(--bc-bg-alt-dark));
     --bc-bg-shadow: var(--bc-bg-shadow-dim, var(--bc-bg-shadow-dark));
     --bc-shadow-strength: var(--bc-shadow-strength-dim, var(--bc-shadow-strength-dark));
 

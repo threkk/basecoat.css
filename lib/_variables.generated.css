@@ -4,6 +4,8 @@
   /* Do not touch unless you know what you are doing */
   /* Loosely based on https://web.dev/articles/building/a-color-scheme */
   /* and https://unifyned.com/colors.html */
+  --bc-brand-saturation-dark: calc(var(--bc-brand-saturation) / 2);
+  --bc-brand-saturation-dim: calc(var(--bc-brand-saturation) / 1.25);
 
   /* Light scheme */
   --bc-brand-light: hsl(
@@ -11,12 +13,9 @@
     var(--bc-brand-saturation),
     var(--bc-brand-lightness)
   );
-  --bc-fg1-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
-  --bc-fg2-light: hsl(var(--bc-brand-hue) 30% 30%);
-  --bc-bg1-light: hsl(var(--bc-brand-hue) 25% 90%);
-  --bc-bg2-light: hsl(var(--bc-brand-hue) 20% 99%);
-  --bc-bg3-light: hsl(var(--bc-brand-hue) 20% 92%);
-  --bc-bg4-light: hsl(var(--bc-brand-hue) 20% 85%);
+  --bc-fg-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
+  --bc-bg-main-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 95%);
+  --bc-bg-alt-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 90%);
 
   --bc-bg-shadow-light: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength-light: 0.02;
@@ -26,24 +25,11 @@
   --bc-warning-light: hsl(40 var(--bc-brand-saturation) 75%);
   --bc-error-light: hsl(2 var(--bc-brand-saturation) 75%);
 
-  /* DARK AND DIM VARIATIONS */
-  --bc-brand-saturation-dark: calc(var(--bc-brand-saturation) / 2);
-  --bc-brand-lightness-dark: calc(var(--bc-brand-lightness) / 1.5);
-  --bc-brand-saturation-dim: calc(var(--bc-brand-saturation) / 1.25);
-  --bc-brand-lightness-dim: calc(var(--bc-brand-lightness) / 1.25);
-
   /* Dark scheme */
-  --bc-brand-dark: hsl(
-    var(--bc-brand-hue) var(--bc-brand-saturation-dark)
-      var(--bc-brand-lightness-dark)
-  );
-  --bc-fg1-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 95%);
-  --bc-fg2-dark: hsl(var(--bc-brand-hue) 5% 65%);
-
-  --bc-bg1-dark: hsl(var(--bc-brand-hue) 10% 15%);
-  --bc-bg2-dark: hsl(var(--bc-brand-hue) 10% 20%);
-  --bc-bg3-dark: hsl(var(--bc-brand-hue) 5% 25%);
-  --bc-bg4-dark: hsl(var(--bc-brand-hue) 5% 30%);
+  --bc-brand-dark:  var(--bc-brand-light);
+  --bc-fg-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 95%);
+  --bc-bg-main-dark: hsl(var(--bc-brand-hue)  var(--bc-brand-saturation) 10%);
+  --bc-bg-alt-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 15%);
 
   --bc-bg-shadow-dark: var(--bc-brand-hue) 50% 8%;
   --bc-shadow-strength-dark: 0.8;
@@ -54,17 +40,10 @@
   --bc-error-dark: hsl(2 var(--bc-brand-saturation-dark) 30%);
 
   /* Dim scheme */
-  --bc-brand-dim: hsl(
-    var(--bc-brand-hue) var(--bc-brand-saturation-dim)
-      var(--bc-brand-lightness-dim)
-  );
-  --bc-fg1-dim: hsl(var(--bc-brand-hue) 15% 75%);
-  --bc-fg2-dim: hsl(var(--bc-brand-hue) 10% 61%);
-
-  --bc-bg1-dim: hsl(var(--bc-brand-hue) 10% 25%);
-  --bc-bg2-dim: hsl(var(--bc-brand-hue) 10% 30%);
-  --bc-bg3-dim: hsl(var(--bc-brand-hue) 5% 35%);
-  --bc-bg4-dim: hsl(var(--bc-brand-hue) 5% 40%);
+  --bc-brand-dim:  var(--bc-brand-light);
+  --bc-fg-dim: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 85%);
+  --bc-bg-main-dim: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dim) 15%);
+  --bc-bg-alt-dim: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dim) 20%);
 
   --bc-bg-shadow-dim: var(--bc-brand-hue) 30% 16%;
   --bc-shadow-strength-dim: 0.2;
