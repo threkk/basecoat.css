@@ -16,21 +16,21 @@
   }
 }
 
-/* Default color scheme when dark is dimmed dark rather than true dark */
+/* If there is no dark scheme defined, we default to light */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
 
-    --bc-brand: var(--bc-brand-dim, var(--bc-brand-dark));
-    --bc-fg: var(--bc-fg-dim, var(--bc-fg-dark));
-    --bc-bg-main: var(--bc-bg-main-dim, var(--bc-bg-main-dark));
-    --bc-bg-alt: var(--bc-bg-alt-dim, var(--bc-bg-alt-dark));
-    --bc-bg-shadow: var(--bc-bg-shadow-dim, var(--bc-bg-shadow-dark));
-    --bc-shadow-strength: var(--bc-shadow-strength-dim, var(--bc-shadow-strength-dark));
+    --bc-brand: var(--bc-brand-dark, var(--bc-brand-light));
+    --bc-fg: var(--bc-fg-dark, var(--bc-fg-light));
+    --bc-bg-main: var(--bc-bg-main-dark, var(--bc-bg-main-light));
+    --bc-bg-alt: var(--bc-bg-alt-dark, var(--bc-bg-alt-light));
+    --bc-bg-shadow: var(--bc-bg-shadow-dark, var(--bc-bg-shadow-light));
+    --bc-shadow-strength: var(--bc-shadow-strength-dark, var(--bc-shadow-strength-light));
 
-    --bc-info: var(--bc-info-dim);
-    --bc-success: var(--bc-success-dim);
-    --bc-warning: var(--bc-warning-dim);
-    --bc-error: var(--bc-error-dim);
+    --bc-info: var(--bc-info-dark);
+    --bc-success: var(--bc-success-dark);
+    --bc-warning: var(--bc-warning-dark);
+    --bc-error: var(--bc-error-dark);
   }
 }

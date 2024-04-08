@@ -1,5 +1,6 @@
 /* Colour scheme overwrite */
-[color-scheme="light"], :where(.light) {
+[color-scheme="light"],
+:where(.light) {
   color-scheme: light;
 
   --bc-brand: var(--bc-brand-light);
@@ -15,7 +16,9 @@
   --bc-error: var(--bc-error-light);
 }
 
-[color-scheme="dim"], :where(.dim) {
+/* If there is no dim scheme defined, we default to dark */
+[color-scheme="dim"],
+:where(.dim) {
   color-scheme: dark;
 
   --bc-brand: var(--bc-brand-dim, var(--bc-brand-dark));
@@ -35,15 +38,20 @@
 }
 
 /* Dark */
-[color-scheme="dark"], :where(.dark) {
+/* If there is no dark scheme defined, we default to light */
+[color-scheme="dark"],
+:where(.dark) {
   color-scheme: dark;
 
-  --bc-brand: var(--bc-brand-dark);
-  --bc-fg: var(--bc-fg-dark);
-  --bc-bg-main: var(--bc-bg-main-dark);
-  --bc-bg-alt: var(--bc-bg-alt-dark);
-  --bc-bg-shadow: var(--bc-bg-shadow-dark);
-  --bc-shadow-strength: var(--bc-shadow-strength-dark);
+  --bc-brand: var(--bc-brand-dark, var(--bc-brand-light));
+  --bc-fg: var(--bc-fg-dark, var(--bc-fg-light));
+  --bc-bg-main: var(--bc-bg-main-dark, var(--bc-bg-main-light));
+  --bc-bg-alt: var(--bc-bg-alt-dark, var(--bc-bg-alt-light));
+  --bc-bg-shadow: var(--bc-bg-shadow-dark, var(--bc-bg-shadow-light));
+  --bc-shadow-strength: var(
+    --bc-shadow-strength-dark,
+    var(--bc-shadow-strength-light)
+  );
 
   --bc-info: var(--bc-info-dark);
   --bc-success: var(--bc-success-dark);
