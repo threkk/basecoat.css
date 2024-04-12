@@ -30,6 +30,12 @@
   border-radius: var(--bc-radius);
   margin: 0.5rem;
   animation: fadeIn ease 2s forwards;
+  transition: all 145ms ease-in-out;
+}
+
+/* Small zoom in when hovered */
+:where(a > img:only-child):hover {
+  transform: scale(1.05);
 }
 
 :where(figure):has(img:only-of-type) {
@@ -224,7 +230,7 @@
     border-style: solid;
     border-color: var(--bc-warning);
     &:is(:hover, :focus) {
-      border: 3px solid;
+      outline: 3px solid var(--bc-fg);
     }
   }
 
@@ -254,7 +260,7 @@
   }
 
   &:is(:hover, :focus):not([type="file"]) {
-    border: 2px solid;
+    outline: 2px solid;
     outline-offset: 0.25rem;
   }
 }

@@ -9,6 +9,7 @@
 /* GENERAL */
 /* Adapted document style: https://smolcss.dev/#smol-document-styles */
 body {
+  animation: fadeIn ease 2s forwards;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
