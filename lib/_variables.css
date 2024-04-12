@@ -35,7 +35,7 @@
   --bc-bg-main: hsl(var(--bc-brand-hue) calc(var(--bc-brand-saturation)/2) 90%);
   --bc-bg-alt: hsl(var(--bc-brand-hue) calc(var(--bc-brand-saturation)/2) 95%);
 
-  --bc-bg-shadow: var(--bc-brand-hue) 10% 20%;
+  --bg-shadow-bg: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength: 0.02;
 
   --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
@@ -49,14 +49,14 @@
 
   --bc-link: var(--bc-brand);
   --bc-shadow: 0 2.8px 2.2px
-      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
+      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
     0 6.7px 5.3px
-      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.01)),
+      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.01)),
     0 12.5px 10px
-      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
     0 22.3px 17.9px
-      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.02)),
+      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
     0 41.8px 33.4px
-      hsl(var(--bc-bg-shadow) / calc(var(--bc-shadow-strength) + 0.03)),
-    0 100px 80px hsl(var(--bc-bg-shadow) / var(--bc-shadow-strength));
+      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bg-shadow-bg) / var(--bc-shadow-strength));
 }

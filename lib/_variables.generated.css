@@ -17,7 +17,7 @@
   --bc-bg-main-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 95%);
   --bc-bg-alt-light: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dark) 90%);
 
-  --bc-bg-shadow-light: var(--bc-brand-hue) 10% 20%;
+  --bg-shadow-bg-light: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength-light: 0.02;
 
   --bc-info-light: hsl(203 var(--bc-brand-saturation) 75%);
@@ -31,7 +31,7 @@
   --bc-bg-main-dark: hsl(var(--bc-brand-hue)  var(--bc-brand-saturation) 10%);
   --bc-bg-alt-dark: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 15%);
 
-  --bc-bg-shadow-dark: var(--bc-brand-hue) 50% 8%;
+  --bg-shadow-bg-dark: var(--bc-brand-hue) 50% 8%;
   --bc-shadow-strength-dark: 0.8;
 
   --bc-info-dark: hsl(203 var(--bc-brand-saturation-dark) 30%);
@@ -45,7 +45,7 @@
   --bc-bg-main-dim: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dim) 15%);
   --bc-bg-alt-dim: hsl(var(--bc-brand-hue) var(--bc-brand-saturation-dim) 20%);
 
-  --bc-bg-shadow-dim: var(--bc-brand-hue) 30% 16%;
+  --bg-shadow-bg-dim: var(--bc-brand-hue) 30% 16%;
   --bc-shadow-strength-dim: 0.2;
 
   --bc-info-dim: hsl(203 var(--bc-brand-saturation-dim) 40%);
