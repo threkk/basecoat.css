@@ -1,5 +1,12 @@
-/* https://smolcss.dev/#smol-grid-centering */
 .center {
-  display: grid;
-  place-content: center;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.border {
+  border: solid 2px var(--bc-fg);
+  border-radius: var(--bc-radius);
+  box-shadow: var(--bc-shadow);
 }

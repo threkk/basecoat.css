@@ -1,5 +1,5 @@
 * {
-  /* Additional CSS reset https://twitter.com/souporserious/status/1746378842787459501 */ 
+  /* Additional CSS reset https://twitter.com/souporserious/status/1746378842787459501 */
   box-sizing: border-box;
   position: relative;
   min-width: 0;
@@ -41,11 +41,23 @@ body > * {
 /* Columns container */
 :where(.columns) {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--bc-element-spacing);
 }
 
 :where(.columns > *) {
+  flex: 1 1 10ch;
+}
+
+/* Bento container */
+/* Based on https://nerdy.dev/neue-bento-layouts-with-grid-has-and-container-queries */
+:where(.bento) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bc-element-spacing);
+  flex-direction: row;
+}
+
+:where(.bento > *) {
   flex: 1 1 10ch;
 }
 

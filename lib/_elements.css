@@ -220,11 +220,13 @@
   justify-content: center;
   text-align: center;
 
-  &:is([type="submit"]):not(:disabled) {
-    background-color: var(--bc-brand);
+  &:is([type="submit"]):not(:disabled),
+  &:is(.btn-brand):not(:disabled) {
+    background-color: var(--bc-link, var(--bc-brand));
   }
 
-  &:is([type="reset"]):not(:disabled) {
+  &:is([type="reset"]):not(:disabled),
+  &:is(.btn-reset):not(:disabled) {
     color: var(--bc-warning);
     background-color: var(--bc-bg-main);
     border-style: solid;
@@ -251,7 +253,8 @@
     }
   }
 
-  &:is(:disabled) {
+  &:is(:disabled),
+  &:is(.btn-outline) {
     color: var(--bc-fg);
     background-color: var(--bc-bg-main);
     border-style: solid;
