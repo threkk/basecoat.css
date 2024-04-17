@@ -1,0 +1,43 @@
+:where(.tabs) {
+  nav {
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      border: solid 4px var(--bc-bg-alt);
+      border-radius: var(--bc-radius);
+      li {
+        flex: 1 1 0px;
+        list-style: none;
+        text-align: center;
+        align-content: center;
+
+        border-radius: var(--bc-radius);
+
+        & a[href^="#"] {
+          display: block;
+          color: var(--bc-fg);
+          transition: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--bc-brand);
+        }
+      }
+    }
+  }
+
+  section {
+    display: none;
+
+    &:target {
+      display: block;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  }
+}

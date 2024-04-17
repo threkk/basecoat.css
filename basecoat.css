@@ -8,6 +8,7 @@
 @import "./lib/components/_codeblock.css";
 @import "./lib/components/_hero.css";
 @import "./lib/components/_aside.css";
+@import "./lib/components/_tabs.css";
 
 /* Variables configuration */
 @import "./lib/_variables.css";

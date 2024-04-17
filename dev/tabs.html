@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Development pages</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./.cache/basecoat.css" rel="stylesheet" />
+    <style type="text/css">
+      .box {
+        min-width: 10ch;
+        min-height: 10ch;
+        aspect-ratio: 1;
+        background-color: var(--bc-bg-alt);
+        border-radius: var(--bc-radius);
+        font-size: 1.5rem;
+      }
+
+      .resizable {
+        resize: both;
+        overflow: auto;
+        max-height: fit-content;
+        max-width: fit-content;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="tabs">
+      <nav>
+        <ul>
+          <li><a href="#first">First section</a></li>
+          <li><a href="#second">Second section</a></li>
+          <li><a href="#third">Third section</a></li>
+        </ul>
+      </nav>
+      <section id="first">
+        <h2>This is the first section</h2>
+        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+      </section>
+      <section id="second"><h2>This is the second section</h2>
+
+        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+      </section>
+      <section id="third"><h2>This is the third section</h2>
+        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+      </section>
+    </main>
+  </body>
+  <script type="text/javascript" src="./reload.js"></script>
+</html>
