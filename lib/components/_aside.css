@@ -1,0 +1,67 @@
+:where(aside) {
+  width: 100%;
+  max-inline-size: unset;
+  background-color: var(--bc-info);
+  border-radius: var(--bc-radius);
+  box-shadow: var(--bc-shadow);
+  font-size: var(--bc-font-size-small);
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+  border-inline-start: solid 0.5rem
+    color-mix(in srgb, 20% black, var(--bc-info));
+
+  /* Default, for things like note, info, example... */
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='16' x2='12' y2='12'/%3E%3Cline x1='12' y1='8' x2='12.01' y2='8'/%3E%3C/svg%3E");
+    content: attr(class, "note");
+    display: block;
+    padding-inline-start: 1.5rem;
+    color: color-mix(in srgb, 50% var(--bc-fg), 50% var(--bc-info));
+    font-weight: bolder;
+    background-repeat: no-repeat;
+    background-position-x: 0rem;
+    background-position-y: center;
+    text-transform: capitalize;
+  }
+
+  &.tip,
+  &.good,
+  &.success {
+    background-color: var(--bc-success);
+    border-inline-start: solid 0.5rem
+      color-mix(in srgb, 20% black, var(--bc-success));
+
+    &::before {
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/%3E%3Cpolyline points="22 4 12 14.01 9 11.01"/%3E%3C/svg%3E');
+      color: color-mix(in srgb, 50% var(--bc-fg), 50% var(--bc-success));
+    }
+  }
+
+  &.beware,
+  &.caution,
+  &.warning {
+    background-color: var(--bc-warning);
+    border-inline-start: solid 0.5rem
+      color-mix(in srgb, 20% black, var(--bc-warning));
+
+    &::before {
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/%3E%3Cline x1="12" y1="9" x2="12" y2="13"/%3E%3Cline x1="12" y1="17" x2="12.01" y2="17"/%3E%3C/svg%3E');
+      color: color-mix(in srgb, 50% var(--bc-fg), 50% var(--bc-warning));
+    }
+  }
+
+  &.bad,
+  &.bug,
+  &.danger,
+  &.error,
+  &.failure {
+    background-color: var(--bc-error);
+    border-inline-start: solid 0.5rem
+      color-mix(in srgb, 20% black, var(--bc-error));
+
+    &::before {
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/%3E%3Cline x1="12" y1="8" x2="12" y2="12"/%3E%3Cline x1="12" y1="16" x2="12.01" y2="16"/%3E%3C/svg%3E');
+      color: color-mix(in srgb, 50% var(--bc-fg), 50% var(--bc-error));
+    }
+  }
+}
