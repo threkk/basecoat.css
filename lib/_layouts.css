@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
 }
 
 body > * {
@@ -25,6 +24,7 @@ body > * {
 :where(main, header, footer) {
   padding-block: var(--bc-layout-spacing);
   position: relative;
+  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
 }
 
 :where(
@@ -42,6 +42,12 @@ body > * {
 :where(.columns) {
   display: flex;
   gap: var(--bc-element-spacing);
+}
+
+@media (orientation: portrait) {
+  :where(.columns) {
+    flex-wrap: wrap;
+  }
 }
 
 :where(.columns > *) {

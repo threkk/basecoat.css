@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Development pages</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./.cache/basecoat.css" rel="stylesheet" />
+    <style type="text/css">
+      .box {
+        min-width: 10ch;
+        min-height: 10ch;
+        aspect-ratio: 1;
+        background-color: var(--bc-bg-alt);
+        border-radius: var(--bc-radius);
+        font-size: 1.5rem;
+      }
+
+      .resizable {
+        resize: both;
+        overflow: auto;
+        max-height: fit-content;
+        max-width: fit-content;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="columns">
+        <div class="box center">1</div>
+        <div class="box center">2</div>
+        <div class="box center">3</div>
+        <div class="box center">4</div>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript" src="./reload.js"></script>
+</html>

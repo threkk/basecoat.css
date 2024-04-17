@@ -1,0 +1,55 @@
+:where(header.hero) {
+  height: 100cqh;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  grid-template-rows: min-content 1fr 1fr min-content;
+  gap: var(--bc-element-spacing);
+  grid-template-areas:
+    "top-left . top-right"
+    "title title title"
+    "subtitle subtitle subtitle"
+    "bottom-left . bottom-right";
+
+  & h1:first-of-type {
+    grid-area: title;
+    justify-self: center;
+    align-self: end;
+    font-size: 3rem;
+  }
+
+  & p {
+    margin: 0;
+    padding: 0;
+    display: none;
+    font-size: var(--bc-font-size-small);
+    white-space: nowrap;
+
+    &:first-of-type:not(.tl, .tr, .bl, .br) {
+      grid-area: subtitle;
+      display: block;
+      font-size: var(--bc-font-size);
+      text-align: center;
+      align-self: start;
+    }
+
+    &.tl {
+      display: block;
+      grid-area: top-left;
+    }
+    &.tr {
+      display: block;
+      grid-area: top-right;
+    }
+    &.bl {
+      display: block;
+      grid-area: bottom-left;
+    }
+    &.br {
+      display: block;
+      grid-area: bottom-right;
+    }
+  }
+}
