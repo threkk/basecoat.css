@@ -14,5 +14,4 @@
 @import "./lib/_variables.css";
 @import "./lib/_variables.generated.css";
 /* Colorschemes */
-@import "./lib/colorschemes/_media-query.css";
-@import "./lib/colorschemes/_color-scheme.css";
+@import "./lib/_color-scheme.css";

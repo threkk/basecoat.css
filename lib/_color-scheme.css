@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light dark;
+  --bc-brand: light-dark(var(--bc-brand-light), var(--bc-brand-dark));
+  --bc-fg: light-dark(var(--bc-fg-light), var(--bc-fg-dark));
+  --bc-bg-main: light-dark(var(--bc-bg-main-light), var(--bc-bg-main-dark));
+  --bc-bg-alt: light-dark(var(--bc-bg-alt-light), var(--bc-bg-alt-dark));
+  --bg-shadow-bg: light-dark(var(--bg-shadow-bg-light), var(--bg-shadow-bg-dark));
+  --bc-shadow-strength: light-dark(var(--bc-shadow-strength-light), var(--bc-shadow-strength-dark));
+
+  --bc-info: light-dark(var(--bc-info-light), var(--bc-info-dark));
+  --bc-success: light-dark(var(--bc-success-light), var(--bc-success-dark));
+  --bc-warning: light-dark(var(--bc-warning-light), var(--bc-warning-dark));
+  --bc-error: light-dark(var(--bc-error-light), var(--bc-error-dark));
+}
+
+:where(.light), [color-scheme="light"] {
+  color-scheme: light;
+}
+
+:where(.dark), [color-scheme="dark"] {
+  color-scheme: dark;
+}
