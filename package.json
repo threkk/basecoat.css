@@ -6,7 +6,6 @@
     "build": "pnpm run build:bundle && pnpm run build:min"
   },
   "devDependencies": {
-    "esbuild": "^0.18.3"
-  },
-  "dependencies": {}
+    "esbuild": "^0.18.20"
+  }
 }
