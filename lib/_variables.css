@@ -15,6 +15,17 @@
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
 
+  /* Traditional font sizes. Unused */ 
+  /* --bc-font-size-small: 11px; */
+  /* --bc-font-size-caption: 12px; */
+  /* --bc-font-size-body: 16px; */
+  /* --bc-font-size-h6: 19px; */
+  /* --bc-font-size-h5: 24px; */
+  /* --bc-font-size-h4: 32px; */
+  /* --bc-font-size-h3: 48px; */
+  /* --bc-font-size-h2: 64px; */
+  /* --bc-font-size-h1: 80px; */
+
   --bc-max-width-long: 70ch;
   --bc-max-width-short: 25ch;
   --bc-layout-spacing: max(8vh, 3rem);
@@ -31,17 +42,17 @@
     var(--bc-brand-lightness)
   );
 
+  --bc-info-hue: 203;
+  --bc-success-hue: 120;
+  --bc-warning-hue: 40;
+  --bc-error-hue: 2;
+
   --bc-fg: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
   --bc-bg-main: hsl(var(--bc-brand-hue) calc(var(--bc-brand-saturation)/2) 90%);
   --bc-bg-alt: hsl(var(--bc-brand-hue) calc(var(--bc-brand-saturation)/2) 95%);
 
   --bg-shadow-bg: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength: 0.02;
-
-  --bc-info: hsl(203 var(--bc-brand-saturation) 75%);
-  --bc-success: hsl(120 var(--bc-brand-saturation) 75%);
-  --bc-warning: hsl(40 var(--bc-brand-saturation) 75%);
-  --bc-error: hsl(2 var(--bc-brand-saturation) 75%);
 
   --bc-fg: var(--bc-fg2);
   --bc-bg-main: var(--bc-bg2);
