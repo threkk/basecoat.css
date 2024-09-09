@@ -1,37 +1,42 @@
 :root {
-  /* BASECOAT VARIABLES */
-
-  /* FONTS */
-  /* Font family https://modernfontstacks.com/ */
-  --bc-font-sans: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;  /* Neo Grotesque */
-  --bc-font-serif:Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;   /* Didone */
+/** 
+* Font family
+*
+* Default combination extract from https://modernfontstacks.com/ for safety.
+* There are three family types.
+*/
+  --bc-font-sans: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+    Arial, sans-serif; /* Neo Grotesque */
+  --bc-font-serif: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
+    P052, Sylfaen, serif; /* Didone */
   --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
-  /* https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/ */
-  --bc-font-size: calc(1rem + 0.25vw);
-  --bc-font-size-small: 0.9rem;
-  --bc-font-body: var(--bc-font-sans);
-  --bc-font-header: var(--bc-font-sans);
 
-  /* Traditional font sizes. Unused */
-  /* --bc-font-size-small: 11px; */
-  /* --bc-font-size-caption: 12px; */
-  /* --bc-font-size-body: 16px; */
-  /* --bc-font-size-h6: 19px; */
-  /* --bc-font-size-h5: 24px; */
-  /* --bc-font-size-h4: 32px; */
-  /* --bc-font-size-h3: 48px; */
-  /* --bc-font-size-h2: 64px; */
-  /* --bc-font-size-h1: 80px; */
-
+/** 
+* Spacing 
+*/
   --bc-max-width-long: 70ch;
   --bc-max-width-short: 25ch;
   --bc-layout-spacing: max(8vh, 3rem);
   --bc-element-spacing: 1.2rem;
   --bc-radius: 0.5rem;
 
-  /* Brand color: Light sea gree == hsl(180, 66%, 38%) */
+
+/**
+* Font size
+*
+* Extracted from https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/ 
+* for responsive spacing calculation. Al the values are expressed in rem.
+*/
+  --bc-font-size: calc(1rem + 0.25vw);
+  --bc-font-size-small: 0.9rem;
+  --bc-font-body: var(--bc-font-sans);
+  --bc-font-header: var(--bc-font-serif);
+
+
+
+/* Brand color: Light sea gree == hsl(180, 66%, 38%) */
   --bc-brand-hue: 180;
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
@@ -74,3 +79,20 @@
       hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
     0 100px 80px hsl(var(--bg-shadow-bg) / var(--bc-shadow-strength));
 }
+
+/**
+* Unused variables.
+* 
+* Kept for future reference.
+*
+* Traditional font sizes.
+*  --bc-font-size-small: 11px;
+*  --bc-font-size-caption: 12px;
+*  --bc-font-size-body: 16px;
+*  --bc-font-size-h6: 19px;
+*  --bc-font-size-h5: 24px;
+*  --bc-font-size-h4: 32px;
+*  --bc-font-size-h3: 48px;
+*  --bc-font-size-h2: 64px;
+*  --bc-font-size-h1: 80px;
+*/
