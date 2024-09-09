@@ -1,11 +1,5 @@
 /* Class combinations */
 /* From https://web.dev/articles/building/a-color-scheme#accessible_colors */
-:where(.alternative) {
-  --bc-fg: var(--bc-fg1);
-  --bc-bg-main: var(--bc-bg3);
-  --bc-bg-alt: var(--bc-bg4);
-}
-
 :where(.info):not(input) {
   background-color: var(--bc-info);
 }

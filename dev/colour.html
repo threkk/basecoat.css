@@ -31,12 +31,17 @@
         background-color: var(--bc-brand);
       }
 
-      .fg1 {
-        background-color: var(--bc-fg1);
+      .fg {
+        color: var(--bc-bg-main);
+        background-color: var(--bc-fg);
       }
 
-      .fg2 {
-        background-color: var(--bc-fg2);
+      .main-bg {
+        background-color: var(--bc-bg-main);
+      }
+
+      .alt-bg {
+        background-color: var(--bc-bg-alt);
       }
     </style>
   </head>
@@ -50,8 +55,6 @@
           <p>
             <label for="brand">Brand:</label>
             <input type="color" name="brand" id="brand" value="#21A0A0" />
-            <input type="checkbox" name="alternative" id="alternative" />
-            <label for="alternative">Alternative scheme </label>
           </p>
           <ul>
             <li>
@@ -70,12 +73,6 @@
               >
             </li>
             <li>
-              <input type="radio" name="theme" id="dim" value="dim" /><label
-                for="dim"
-                >Dim</label
-              >
-            </li>
-            <li>
               <input type="radio" name="theme" id="dark" value="dark" /><label
                 for="dark"
                 >Dark</label
@@ -85,17 +82,15 @@
         </div>
       </fieldset>
       <article>
-        <h2>Text</h2>
+        <h2>Foreground</h2>
         <section>
-          <div class="fg1">Text 1</div>
-          <div class="fg2">Text 2</div>
+          <div class="brand">Brand</div>
+          <div class="fg">Text</div>
         </section>
-        <h2>Surfaces</h2>
+        <h2>Background</h2>
         <section>
-          <div class="scheme-1 shadow">Surface 1</div>
-          <div class="scheme-2 shadow">Surface 2</div>
-          <div class="scheme-3 shadow">Surface 3</div>
-          <div class="scheme-4 shadow">Surface 4</div>
+          <div class="main-bg shadow">Main</div>
+          <div class="alt-bg shadow">Alternative</div>
         </section>
         <h2>Info, success, warning, error</h2>
         <section>

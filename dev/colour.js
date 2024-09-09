@@ -5,12 +5,6 @@ document.getElementsByName("theme").forEach((radio) =>
   }),
 );
 
-document.getElementById("alternative").addEventListener("change", (e) => {
-  const isChecked = e.target.checked;
-  if (isChecked) document.body.className = "alternative";
-  else document.body.className = "";
-});
-
 document.getElementById("brand").addEventListener("change", (e) => {
   const hex = e.target.value;
 

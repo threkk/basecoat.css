@@ -22,14 +22,14 @@
     var(--bc-brand-hue) var(--bc-brand-saturation-dark) 99%
   );
   --bc-bg-alt-light: hsl(
-    var(--bc-brand-hue) var(--bc-brand-saturation-dark) 95%
+    var(--bc-brand-hue) var(--bc-brand-saturation-dark) 90%
   );
 
   /* From https://lea.verou.me/blog/2024/contrast-color/ */
   --bc-fg-light: color(from var(--bc-bg-main-light) xyz-d65 var(--y) var(--y) var(--y));
-  @supports (color: contrast-color(black)) {
-    --bc-fg-light: contrast-color(var(--bc-bg-main-light));
-  }
+  /* @supports (color: contrast-color(black)) { */
+  /*   --bc-fg-light: contrast-color(var(--bc-bg-main-light)); */
+  /* } */
 
   --bg-shadow-bg-light: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength-light: 0.02;
@@ -48,17 +48,17 @@
   /* Dark scheme */
   --bc-brand-dark: var(--bc-brand-light);
   --bc-bg-main-dark: hsl(
-    var(--bc-brand-hue) var(--bc-brand-saturation-light) 1%
+    var(--bc-brand-hue) var(--bc-brand-saturation-light) 3%
   );
   --bc-bg-alt-dark: hsl(
-    var(--bc-brand-hue) var(--bc-brand-saturation-light) 5%
+    var(--bc-brand-hue) var(--bc-brand-saturation-light) 10%
   );
 
   /* From https://lea.verou.me/blog/2024/contrast-color/ */
   --bc-fg-dark: color(from var(--bc-bg-main-dark) xyz-d65 var(--y) var(--y) var(--y));
-  @supports (color: contrast-color(black)) {
-    --bc-fg-dark: constrast-color(var(--bc-bg-main-dark));
-  }
+  /* @supports (color: contrast-color(black)) { */
+  /*   --bc-fg-dark: constrast-color(var(--bc-bg-main-dark)); */
+  /* } */
 
   --bg-shadow-bg-dark: var(--bc-brand-hue) 50% 8%;
   --bc-shadow-strength-dark: 0.8;

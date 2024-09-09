@@ -140,17 +140,17 @@
 
 /* Insert, delete, mark */
 :where(mark) {
-  color: var(--bc-fg1);
+  color: var(--bc-fg);
   background-color: var(--bc-warning);
 }
 
 :where(ins) {
-  color: var(--bc-fg1);
+  color: var(--bc-fg);
   background-color: var(--bc-success);
 }
 
 :where(del) {
-  color: var(--bc-fg1);
+  color: var(--bc-fg);
   background-color: var(--bc-error);
 }
 
