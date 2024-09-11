@@ -1,10 +1,10 @@
 :root {
-/** 
-* Font family
-*
-* Default combination extract from https://modernfontstacks.com/ for safety.
-* There are three family types.
-*/
+  /** 
+  * Font family
+  *
+  * Default combination extract from https://modernfontstacks.com/ for safety.
+  * There are three family types.
+  */
   --bc-font-sans: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
     Arial, sans-serif; /* Neo Grotesque */
   --bc-font-serif: Didot, "Bodoni MT", "Noto Serif Display", "URW Palladio L",
@@ -12,31 +12,27 @@
   --bc-font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
     Consolas, "DejaVu Sans Mono", monospace; /*Monospace code*/
 
-
-/** 
-* Spacing 
-*/
+  /** 
+  * Spacing 
+  */
   --bc-max-width-long: 70ch;
   --bc-max-width-short: 25ch;
   --bc-layout-spacing: max(8vh, 3rem);
   --bc-element-spacing: 1.2rem;
   --bc-radius: 0.5rem;
 
-
-/**
-* Font size
-*
-* Extracted from https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/ 
-* for responsive spacing calculation. Al the values are expressed in rem.
-*/
+  /**
+  * Font size
+  *
+  * Extracted from https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/ 
+  * for responsive spacing calculation. Al the values are expressed in rem.
+  */
   --bc-font-size: calc(1rem + 0.25vw);
   --bc-font-size-small: 0.9rem;
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
 
-
-
-/* Brand color: Light sea gree == hsl(180, 66%, 38%) */
+  /* Brand color: Light sea gree == hsl(180, 66%, 38%) */
   --bc-brand-hue: 180;
   --bc-brand-saturation: 66%;
   --bc-brand-lightness: 38%;
@@ -51,33 +47,29 @@
   --bc-warning-hue: 40;
   --bc-error-hue: 2;
 
-  --bc-fg: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 10%);
+  --bc-fg: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 5%);
   --bc-bg-main: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 90%
+    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 99%
   );
   --bc-bg-alt: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 95%
+    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 90%
   );
 
-  --bg-shadow-bg: var(--bc-brand-hue) 10% 20%;
+  --bc-shadow-bg: var(--bc-brand-hue) 10% 20%;
   --bc-shadow-strength: 0.02;
-
-  --bc-fg: var(--bc-fg2);
-  --bc-bg-main: var(--bc-bg2);
-  --bc-bg-alt: var(--bc-bg1);
 
   --bc-link: var(--bc-brand);
   --bc-shadow: 0 2.8px 2.2px
-      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
+      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
     0 6.7px 5.3px
-      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.01)),
+      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.01)),
     0 12.5px 10px
-      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
+      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
     0 22.3px 17.9px
-      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
+      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
     0 41.8px 33.4px
-      hsl(var(--bg-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
-    0 100px 80px hsl(var(--bg-shadow-bg) / var(--bc-shadow-strength));
+      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
+    0 100px 80px hsl(var(--bc-shadow-bg) / var(--bc-shadow-strength));
 }
 
 /**
