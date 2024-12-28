@@ -8,9 +8,7 @@
     <style type="text/css">
       :root {
         /* Light sea gree */
-        --bc-brand-hue: 180;
-        --bc-brand-saturation: 66%;
-        --bc-brand-lightness: 38%;
+        --bc-brand-seed: hsl(180, 66%, 38%);
       }
 
       nav > ul {
@@ -26,6 +24,10 @@
       }
       nav > ul > li > ul {
         display: block;
+      }
+
+      p.buttons-list > * {
+        margin-block: 0.25rem;
       }
     </style>
   </head>
@@ -276,8 +278,9 @@ p q r s t u v w x y z { | } ~ </pre
         <article id="text__inline">
           <h1>Inline elements</h1>
 
-          <p><a href="#!">This is a text link</a>.</p>
-          <p><a href="https://threkk.com">This is an external text link</a>.</p>
+          <p>This is a <a href="#!">text link</a>.</p>
+          <p>This is an <a href="https://threkk.com">external text link</a>.</p>
+          <p>This is an <a href="#!" class="accent">accented link</a>.</p>
           <p>
             <strong>Strong is used to indicate strong importance.</strong>
           </p>
@@ -432,7 +435,7 @@ p q r s t u v w x y z { | } ~ </pre
               <label for="input__text4">Valid</label>
               <input
                 id="input__text4"
-                class="success"
+                class="ok"
                 type="text"
                 placeholder="Text Input"
               />
@@ -591,15 +594,19 @@ p q r s t u v w x y z { | } ~ </pre
           <fieldset id="forms__action">
             <legend>Action buttons</legend>
             <p class="buttons-list">
-              <input type="submit" value="&lt;input type=submit&gt;" />
               <input type="button" value="&lt;input type=button&gt;" />
+              <input type="button" class="accent" value="&lt;input type=button class=accent &gt;" />
+              <input type="button" class="outline" value="&lt;input type=button class=outline &gt;" />
+              <input type="submit" value="&lt;input type=submit&gt;" />
               <input type="reset" value="&lt;input type=reset&gt;" />
               <input type="submit" value="&lt;input disabled&gt;" disabled="" />
             </p>
             <br />
             <p class="buttons-list">
-              <button type="submit">&lt;button type=submit&gt;</button>
               <button type="button">&lt;button type=button&gt;</button>
+              <button type="button" class="accent">&lt;button type=button class=accent&gt;</button>
+              <button type="button" class="outline">&lt;button type=button class=outline&gt;</button>
+              <button type="submit">&lt;button type=submit&gt;</button>
               <button type="reset">&lt;button type=reset&gt;</button>
               <button type="button" disabled="">&lt;button disabled&gt;</button>
             </p>
@@ -609,6 +616,11 @@ p q r s t u v w x y z { | } ~ </pre
             <p class="buttons-list">
               <a role="button" class="btn"
                 >&lt;a role=button class=button&gt;</a
+              >
+              <a role="button" class="btn accent"
+                >&lt;a role=button class=button accent&gt;</a
+              ><a role="button" class="btn outline"
+                >&lt;a role=button class=button outline&gt;</a
               >
             </p>
           </fieldset>

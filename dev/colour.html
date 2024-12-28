@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./.cache/basecoat.css" rel="stylesheet" />
     <style type="text/css">
-      :root {
-        /* Light sea gree */
-        --bc-brand-hue: 180;
-        --bc-brand-saturation: 66%;
-        --bc-brand-lightness: 38%;
-      }
-
       section {
         display: grid;
         grid-gap: 1rem;
-        grid-template-columns: 18ch 18ch;
+        grid-template-columns: repeat(4, 18ch);
         grid-auto-rows: 18ch;
       }
 
@@ -33,16 +26,24 @@
       }
 
       .fg {
-        color: var(--bc-bg-main);
-        background-color: var(--bc-fg);
+        color: var(--bc-surf-medium);
+        background-color: var(--bc-text);
       }
 
-      .main-bg {
-        background-color: var(--bc-bg-main);
+      .accent {
+        background-color: var(--bc-accent);
       }
 
-      .alt-bg {
-        background-color: var(--bc-bg-alt);
+      .light-bg {
+        background-color: var(--bc-surf-light);
+      }
+
+      .medium-bg {
+        background-color: var(--bc-surf-medium);
+      }
+
+      .dark-bg {
+        background-color: var(--bc-surf-dark);
       }
     </style>
   </head>
@@ -87,17 +88,19 @@
         <section>
           <div class="brand shadow">Brand</div>
           <div class="fg shadow">Text</div>
+          <div class="accent shadow">Accent</div>
         </section>
         <h2>Background</h2>
         <section>
-          <div class="main-bg shadow">Main</div>
-          <div class="alt-bg shadow">Alternative</div>
+          <div class="light-bg shadow">Light</div>
+          <div class="medium-bg shadow">Medium</div>
+          <div class="dark-bg shadow">Dark</div>
         </section>
         <h2>Info, success, warning, error</h2>
         <section>
           <div class="info shadow">Info</div>
-          <div class="success shadow">Success</div>
-          <div class="warning shadow">Warning</div>
+          <div class="ok shadow">Success</div>
+          <div class="warn shadow">Warning</div>
           <div class="error shadow">Error</div>
         </section>
       </article>

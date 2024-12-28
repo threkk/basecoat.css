@@ -1,14 +1,14 @@
 :root {
   font-size: var(--bc-font-size);
-  line-height: 2;
+  line-height: var(--bc-font-height);
 }
 
 :where(body) {
   min-height: 100dvh;
   font-family: var(--bc-font-body);
   font-size: var(--bc-font-size);
-  color: var(--bc-fg);
-  background-color: var(--bc-bg-main);
+  color: var(--bc-text);
+  background-color: var(--bc-surf-medium);
   letter-spacing: 0.025rem;
   orphans: 3;
   widows: 3;
@@ -49,13 +49,13 @@
 }
 
 :where(
-    h1[id^="section"]:before,
-    h2[id^="section"]:before,
-    h3[id^="section"]:before,
-    h4[id^="section"]:before,
-    h5[id^="section"]:before,
-    h6[id^="section"]:before
-  ) {
+  h1[id^="section"]:before,
+  h2[id^="section"]:before,
+  h3[id^="section"]:before,
+  h4[id^="section"]:before,
+  h5[id^="section"]:before,
+  h6[id^="section"]:before
+) {
   content: "\00A7 ";
   font-weight: lighter;
 }
@@ -70,7 +70,7 @@
   transition: text-decoration-color 145ms ease-in-out;
 
   &::selection {
-    color: var(--bc-fg);
+    color: var(--bc-text);
   }
   &:hover {
     text-decoration-color: var(--bc-link, var(--bc-brand));
@@ -78,6 +78,17 @@
 
   &:visited {
     color: color-mix(in srgb, 5% black, var(--bc-brand));
+  }
+
+  &.accent {
+    color: var(--bc-accent);
+    &:hover {
+      text-decoration-color: var(--bc-accent);
+    }
+
+    &:visited {
+      color: color-mix(in srgb, 5% black, var(--bc-accent));
+    }
   }
 }
 
@@ -112,7 +123,7 @@
 /* Blockquote */
 :where(blockquote) {
   border-color: var(--bc-brand);
-  background-color: var(--bc-bg-alt);
+  background-color: var(--bc-surf-dark);
   border-radius: var(--bc-radius);
   box-shadow: var(--bc-shadow);
   font-size: var(--bc-font-size-small);
@@ -140,32 +151,41 @@
 
 /* Insert, delete, mark */
 :where(mark) {
-  color: var(--bc-fg);
-  background-color: var(--bc-warning);
+  color: var(--bc-text);
+  background-color: var(--bc-warn);
 }
 
 :where(ins) {
-  color: var(--bc-fg);
-  background-color: var(--bc-success);
+  color: var(--bc-text);
+  background-color: var(--bc-ok);
 }
 
 :where(del) {
-  color: var(--bc-fg);
+  color: var(--bc-text);
   background-color: var(--bc-error);
 }
 
 :where(details) {
-  background-color: var(--bc-bg-alt);
+  background-color: var(--bc-surf-light);
   border-radius: var(--bc-radius);
 
   summary {
+    border-top-left-radius: var(--bc-radius);
+    border-top-right-radius: var(--bc-radius);
     padding-inline: 1rem;
     cursor: pointer;
-    font-weight: bold;
+    background-color: var(--bc-surf-dark);
+  }
+
+  &:not([open]) > summary {
+    border-bottom-left-radius: var(--bc-radius);
+    border-bottom-right-radius: var(--bc-radius);
   }
 
   &[open] > summary {
-    border-block-end: solid 1px var(--bc-fg);
+    border-block-end: solid 1px var(--bc-surf-medium);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   & > *:not(summary) {
@@ -186,8 +206,8 @@
   overflow-x: scroll;
   border-collapse: collapse;
   border-radius: var(--bc-radius);
-  color: var(--bc-fg);
-  background-color: var(--bc-bg-main);
+  color: var(--bc-text);
+  background-color: var(--bc-surf-medium);
 
   thead,
   tbody,
@@ -197,7 +217,7 @@
 
   thead th,
   tfoot th {
-    background-color: var(--bc-bg-alt);
+    background-color: var(--bc-surf-dark);
   }
 
   thead th:first-child {
@@ -215,7 +235,7 @@
   }
 
   tbody td {
-    border: solid 1px var(--bc-bg-alt);
+    border: solid 1px var(--bc-surf-light);
   }
 
   th,
@@ -257,7 +277,7 @@
   display: inline-block;
   border-radius: var(--bc-radius);
   font-family: var(--bc-font-mono);
-  background-color: var(--bc-bg-alt);
+  background-color: var(--bc-surf-light);
   padding-inline: 0.2rem;
 }
 
@@ -268,7 +288,7 @@
 }
 
 :where(pre) {
-  background-color: var(--bc-bg-alt);
+  background-color: var(--bc-surf-light);
   border-radius: var(--bc-radius);
   padding: 0.5rem;
 }

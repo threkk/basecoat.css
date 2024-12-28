@@ -31,46 +31,56 @@
   --bc-font-size-small: 0.9rem;
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
+  --bc-font-height: 1.8rem;
 
-  /* Brand color: Light sea gree == hsl(180, 66%, 38%) */
-  --bc-brand-hue: 180;
-  --bc-brand-saturation: 66%;
-  --bc-brand-lightness: 38%;
-  --bc-brand: hsl(
-    var(--bc-brand-hue),
-    var(--bc-brand-saturation),
-    var(--bc-brand-lightness)
+  /**
+  * Colours
+  *  
+  * Colour schemes are generated based on the colour seed. We pick up the hue from the seed and generate the whole
+  * colour scheme. Individual values can be replaced by overwritting the light and/or dark versions. 
+  * 
+  * L & C values from https://evilmartians.com/chronicles/better-dynamic-themes-in-tailwind-with-oklch-color-magic
+  * L = 0.9778, 0.9356, 0.8811, 0.8267, 0.7422, 0.6478, 0.5733, 0.4689, 0.3944, 0.3200, 0.2378
+  * C = 0.0108, 0.0321, 0.0609, 0.0908, 0.1398, 0.1472, 0.1299, 0.1067, 0.0898, 0.0726, 0.054
+  */
+
+  --bc-brand-seed: oklch(from hsl(180, 66%, 38%) l c h);
+
+
+
+  /* Hues for key colours */
+  --bc-info-hue: 263; /* Bright blue #004EFF */
+  --bc-ok-hue: 125; /* Bright green #AADB1E */
+  --bc-warn-hue: 102; /* Bright yellow #FFE900 */
+  --bc-error-hue: 29; /* Bright red #E10600 */
+
+
+
+  /* Light scheme */
+  --bc-brand-light: oklch(from var(--bc-brand-seed) 0.7422 0.1398 h);
+  --bc-accent-light: oklch(
+    from var(--bc-brand-light) l c mod(calc(h + 180), 360)
   );
+  --bc-text-light: oklch(from var(--bc-brand-light) 0.2378 0.054 h);
 
-  --bc-info-hue: 203;
-  --bc-success-hue: 120;
-  --bc-warning-hue: 40;
-  --bc-error-hue: 2;
+  --bc-surf-dark-light: oklch(from var(--bc-brand-light) 0.8811 0.0609 h);
+  --bc-surf-medium-light: oklch(from var(--bc-brand-light) 0.9356 0.0321 h);
+  --bc-surf-light-light: oklch(from var(--bc-brand-light) 0.9778 0.0108 h);
 
-  --bc-fg: hsl(var(--bc-brand-hue) var(--bc-brand-saturation) 5%);
-  --bc-bg-main: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 99%
-  );
-  --bc-bg-alt: hsl(
-    var(--bc-brand-hue) calc(var(--bc-brand-saturation) / 2) 90%
-  );
+  /* Dark scheme */
+  --bc-brand-dark: oklch(from var(--bc-brand-seed) 0.6478 0.1472 h);
+  --bc-accent-dark: oklch(from var(--bc-brand-dark) l c calc(h + 180));
+  --bc-text-dark: oklch(from var(--bc-brand-dark) 0.9778 0.0108 h);
 
-  --bc-shadow-bg: var(--bc-brand-hue) 10% 20%;
-  --bc-shadow-strength: 0.02;
+  --bc-surf-light-dark: oklch(from var(--bc-brand-dark) 0.3944 0.0898 h);
+  --bc-surf-medium-dark: oklch(from var(--bc-brand-dark) 0.32 0.0726 h);
+  --bc-surf-dark-dark: oklch(from var(--bc-brand-dark) 0.2378 0.054 h);
 
+  /* Other */
+  --bc-shadow: 4px 4px 16px 2px oklch(from var(--bc-brand) 0 0 h /0.25);
   --bc-link: var(--bc-brand);
-  --bc-shadow: 0 2.8px 2.2px
-      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
-    0 6.7px 5.3px
-      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.01)),
-    0 12.5px 10px
-      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
-    0 22.3px 17.9px
-      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.02)),
-    0 41.8px 33.4px
-      hsl(var(--bc-shadow-bg) / calc(var(--bc-shadow-strength) + 0.03)),
-    0 100px 80px hsl(var(--bc-shadow-bg) / var(--bc-shadow-strength));
 }
+
 
 /**
 * Unused variables.

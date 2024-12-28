@@ -12,6 +12,6 @@
 
 /* Variables configuration */
 @import "./lib/_variables.css";
-@import "./lib/_variables.generated.css";
+
 /* Colorschemes */
 @import "./lib/_color-scheme.css";

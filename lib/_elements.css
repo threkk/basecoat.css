@@ -74,9 +74,9 @@
   height: 1px;
   background-image: linear-gradient(
     to right,
-    var(--bc-fg),
+    var(--bc-text),
     var(--bc-brand),
-    var(--bc-fg)
+    var(--bc-text)
   );
 }
 
@@ -103,14 +103,14 @@
   padding-inline: 0.5rem;
 }
 :where(fieldset) {
-  border-color: var(--bc-fg);
+  border-color: var(--bc-text);
   box-shadow: var(--bc-shadow);
 }
 :where(input:not([type="checkbox"], [type="radio"]), textarea, select) {
-  background-color: var(--bc-bg-alt);
+  background-color: var(--bc-surf-light);
   border-radius: var(--bc-radius);
   border-style: hidden;
-  color: var(--bc-fg);
+  color: var(--bc-text);
   display: inline-block;
   font-size: 1rem;
   height: 1.8rem;
@@ -121,11 +121,15 @@
 
   &::placeholder {
     opacity: 25%;
-    color: var(--bc-fg);
+    color: var(--bc-text);
     font-style: italic;
   }
 
-  &:disabled,
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--bc-surf-light);
+    background-color: var(--bc-surf-dark);
+  }
   &:read-only:not(
       select,
       [type="button"],
@@ -136,19 +140,20 @@
       [type="range"]
     ) {
     cursor: not-allowed;
+    background-color: var(--bc-surf-dark);
   }
 
   &.info {
     border: dotted 0.15rem var(--bc-info);
   }
 
-  &.success {
-    border: dotted 0.15rem var(--bc-success);
+  &.ok {
+    border: dotted 0.15rem var(--bc-ok);
   }
 
-  &.warning,
+  &.warn,
   &:required {
-    border: dotted 0.15rem var(--bc-warning);
+    border: dotted 0.15rem var(--bc-warn);
   }
 
   &.error,
@@ -189,27 +194,28 @@
 /* Buttons */
 /* https://web.dev/articles/building/a-button-component */
 :where(
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"],
-    input[type="file"],
-    button
-  ),
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  input[type="file"],
+  button
+),
 :where(a[role="button"]),
 :where(input[type="file"])::file-selector-button {
-  background-color: var(--bc-bg-alt);
-  border-color: var(--bc-fg);
+  background-color: var(--bc-brand);
+  border-color: var(--bc-text);
   border-radius: var(--bc-radius);
   border-style: 2px solid;
   border-style: hidden;
   box-shadow: var(--bc-shadow);
-  color: var(--bc-fg);
+  color: var(--bc-text);
   cursor: pointer;
   font-size: 1rem;
   gap: 1ch;
   height: 1.8rem;
   padding-block: 0.25rem;
   padding-inline: 0.5rem;
+  margin-block: 0.05rem;
   touch-action: manipulation;
   transition: border 145ms ease;
   user-select: none;
@@ -222,18 +228,27 @@
   text-align: center;
 
   &:is([type="submit"]):not(:disabled),
-  &:is(.btn-brand):not(:disabled) {
-    background-color: var(--bc-link, var(--bc-brand));
+  &:is(.accent):not(:disabled) {
+    background-color: var(--bc-accent);
   }
 
   &:is([type="reset"]):not(:disabled),
-  &:is(.btn-reset):not(:disabled) {
-    color: var(--bc-warning);
-    background-color: var(--bc-bg-main);
+  &:is(.reset):not(:disabled) {
+    color: var(--bc-warn);
+    background-color: var(--bc-surf-medium);
     border-style: solid;
-    border-color: var(--bc-warning);
+    border-color: var(--bc-warn);
     &:is(:hover, :focus) {
-      outline: 3px solid var(--bc-fg);
+      outline: 3px solid var(--bc-surf-light);
+    }
+  }
+
+  &:is(.outline):not(:disabled) {
+    color: var(--bc-text);
+    background-color: var(--bc-surf-medium);
+    border-style: solid;
+    &:is(:hover, :focus) {
+      outline: 3px solid var(--bc-surf-light);
     }
   }
 
@@ -241,6 +256,7 @@
     align-items: start;
     justify-content: start;
     text-align: start;
+    background-color: var(--bc-surf-light);
     width: 100%;
 
     &::file-selector-button {
@@ -248,23 +264,23 @@
       height: 100%;
       font-size: var(--bc-font-size-small);
       padding-block: 0;
+      padding-inline: 0.5rem;
       display: inline-block;
       background-color: var(--bc-brand);
       box-shadow: none;
     }
   }
 
-  &:is(:disabled),
-  &:is(.btn-outline) {
-    color: var(--bc-fg);
-    background-color: var(--bc-bg-main);
+  &:is(:disabled) {
+    color: var(--bc-text);
+    background-color: var(--bc-surf-dark);
     border-style: solid;
-    border-color: var(--bc-fg);
+    border-color: var(--bc-text);
     cursor: not-allowed;
   }
 
   &:is(:hover, :focus):not([type="file"]) {
-    outline: 2px solid;
+    outline: 2px solid var(--bc-surf-light);
     outline-offset: 0.25rem;
   }
 }

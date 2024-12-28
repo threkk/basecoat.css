@@ -4,12 +4,12 @@
   background-color: var(--bc-info);
 }
 
-:where(.success):not(input) {
-  background-color: var(--bc-success);
+:where(.ok):not(input) {
+  background-color: var(--bc-ok);
 }
 
-:where(.warning):not(input) {
-  background-color: var(--bc-warning);
+:where(.warn):not(input) {
+  background-color: var(--bc-warn);
 }
 
 :where(.error):not(input) {
@@ -20,12 +20,12 @@
   border: solid 2px var(--bc-info);
 }
 
-:where(input.success) {
-  border: solid 2px var(--bc-success);
+:where(input.ok) {
+  border: solid 2px var(--bc-ok);
 }
 
-:where(input.warning) {
-  border: solid 2px var(--bc-warning);
+:where(input.warn) {
+  border: solid 2px var(--bc-warn);
 }
 
 :where(input.error) {
