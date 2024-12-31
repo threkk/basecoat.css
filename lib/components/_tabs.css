@@ -1,12 +1,12 @@
 :where(.tabs) {
-  nav {
-    ul {
+  & nav {
+    & ul {
       display: flex;
       margin: 0;
       padding: 0;
-      border: solid 4px var(--bc-bg-alt);
+      border: solid 4px var(--bc-surf-dark);
       border-radius: var(--bc-radius);
-      li {
+      & li {
         flex: 1 1 0px;
         list-style: none;
         text-align: center;
@@ -18,21 +18,22 @@
           display: block;
           color: var(--bc-fg);
           transition: none;
-          &:hover {
+          &:is(:hover, :focus, :active) {
             text-decoration: none;
           }
         }
 
         &:hover,
         &:focus,
+        &:has(> a[href^="#"]:focus),
         &:active {
-          background-color: var(--bc-brand);
+          background-color: var(--bc-surf-light);
         }
       }
     }
   }
 
-  section {
+  & section {
     display: none;
 
     &:target {

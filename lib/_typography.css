@@ -201,50 +201,6 @@
   overflow-x: scroll;
 }
 
-:where(table) {
-  display: table;
-  overflow-x: scroll;
-  border-collapse: collapse;
-  border-radius: var(--bc-radius);
-  color: var(--bc-text);
-  background-color: var(--bc-surf-medium);
-
-  thead,
-  tbody,
-  tfoot {
-    white-space: nowrap;
-  }
-
-  thead th,
-  tfoot th {
-    background-color: var(--bc-surf-dark);
-  }
-
-  thead th:first-child {
-    border-start-start-radius: var(--bc-radius);
-  }
-  thead th:last-child {
-    border-start-end-radius: var(--bc-radius);
-  }
-
-  tfoot th:first-child {
-    border-end-start-radius: var(--bc-radius);
-  }
-  tfoot th:last-child {
-    border-end-end-radius: var(--bc-radius);
-  }
-
-  tbody td {
-    border: solid 1px var(--bc-surf-light);
-  }
-
-  th,
-  td {
-    padding: 1rem;
-    text-align: start;
-  }
-}
-
 /* Captions */
 :where(caption, figcaption) {
   caption-side: bottom;

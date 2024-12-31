@@ -15,8 +15,8 @@
   /** 
   * Spacing 
   */
-  --bc-max-width-long: 70ch;
-  --bc-max-width-short: 25ch;
+  --bc-max-width-long: clamp(375px, 80%, 100ch);
+  --bc-max-width-short: 65ch;
   --bc-layout-spacing: max(8vh, 3rem);
   --bc-element-spacing: 1.2rem;
   --bc-radius: 0.5rem;
@@ -31,7 +31,7 @@
   --bc-font-size-small: 0.9rem;
   --bc-font-body: var(--bc-font-sans);
   --bc-font-header: var(--bc-font-serif);
-  --bc-font-height: 1.8rem;
+  --bc-font-height: 1.8;
 
   /**
   * Colours
@@ -40,13 +40,13 @@
   * colour scheme. Individual values can be replaced by overwritting the light and/or dark versions. 
   * 
   * L & C values from https://evilmartians.com/chronicles/better-dynamic-themes-in-tailwind-with-oklch-color-magic
+  *
+  * (From light to dark) 
   * L = 0.9778, 0.9356, 0.8811, 0.8267, 0.7422, 0.6478, 0.5733, 0.4689, 0.3944, 0.3200, 0.2378
   * C = 0.0108, 0.0321, 0.0609, 0.0908, 0.1398, 0.1472, 0.1299, 0.1067, 0.0898, 0.0726, 0.054
   */
-
   --bc-brand-seed: oklch(from hsl(180, 66%, 38%) l c h);
-
-
+  --bc-accent-angle: 180;
 
   /* Hues for key colours */
   --bc-info-hue: 263; /* Bright blue #004EFF */
@@ -54,12 +54,10 @@
   --bc-warn-hue: 102; /* Bright yellow #FFE900 */
   --bc-error-hue: 29; /* Bright red #E10600 */
 
-
-
   /* Light scheme */
-  --bc-brand-light: oklch(from var(--bc-brand-seed) 0.7422 0.1398 h);
+  --bc-brand-light: oklch(from var(--bc-brand-seed) 0.6478 0.1472 h);
   --bc-accent-light: oklch(
-    from var(--bc-brand-light) l c mod(calc(h + 180), 360)
+    from var(--bc-brand-light) l c mod(calc(h + var(--bc-accent-angle)), 360)
   );
   --bc-text-light: oklch(from var(--bc-brand-light) 0.2378 0.054 h);
 
@@ -69,7 +67,9 @@
 
   /* Dark scheme */
   --bc-brand-dark: oklch(from var(--bc-brand-seed) 0.6478 0.1472 h);
-  --bc-accent-dark: oklch(from var(--bc-brand-dark) l c calc(h + 180));
+  --bc-accent-dark: oklch(
+    from var(--bc-brand-dark) l c mod(calc(h + var(--bc-accent-angle)), 360)
+  );
   --bc-text-dark: oklch(from var(--bc-brand-dark) 0.9778 0.0108 h);
 
   --bc-surf-light-dark: oklch(from var(--bc-brand-dark) 0.3944 0.0898 h);
@@ -77,10 +77,9 @@
   --bc-surf-dark-dark: oklch(from var(--bc-brand-dark) 0.2378 0.054 h);
 
   /* Other */
-  --bc-shadow: 4px 4px 16px 2px oklch(from var(--bc-brand) 0 0 h /0.25);
+  --bc-shadow: 4px 4px 16px 2px oklch(from var(--bc-brand) 0 0 h / 0.25);
   --bc-link: var(--bc-brand);
 }
-
 
 /**
 * Unused variables.

@@ -1,10 +1,20 @@
 * {
   scroll-behavior: smooth;
   accent-color: var(--bc-brand);
+  /* Prevent font size inflation */
+  text-size-adjust: none;
 }
 
 ::selection {
   background-color: var(--bc-brand);
+}
+
+/*
+ * Anything that has been anchored to should have extra scroll margin 
+ * https://piccalil.li/blog/a-more-modern-css-reset/
+ */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 /* Pictures */
@@ -17,7 +27,7 @@
     opacity: 1;
   }
 }
-:where(img, video, audio) {
+:where(img, video, audio, picture) {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
@@ -56,7 +66,7 @@
   & > img {
     margin: 0;
     padding: 0;
-    flex: 1 1 min(100%, var(--bc-max-width-short));
+    flex: 1 1 min(100%, calc(var(--bc-max-width-short) / 2));
     aspect-ratio: 1.618/1;
     height: auto;
     object-fit: cover;
@@ -175,6 +185,10 @@
 :where(textarea) {
   height: 100%;
   resize: vertical;
+
+  &:not([rows]) {
+    min-height: 10em;
+  }
 }
 
 :where(ul li):has(input) {
@@ -301,6 +315,114 @@
     box-shadow: none;
   }
 }
+
+/* Tables */
+:where(table) {
+  border-collapse: collapse;
+  border-radius: var(--bc-radius);
+  color: var(--bc-text);
+  display: table;
+  table-layout: auto;
+  white-space: nowrap;
+  width: max(var(--bc-max-width-short), 100%);
+  font-size: 0.9rem;
+
+  /* Borders */
+  & thead {
+    border-block-end: 2px solid var(--bc-brand);
+  }
+
+  & tfoot {
+    border-block-start: 2px solid var(--bc-brand);
+  }
+
+  & th,
+  & td {
+    padding: 1rem;
+    border: solid 1px var(--bc-surf-medium);
+  }
+
+  /* Alignment */
+  & thead th,
+  & tbody th,
+  & tfoot th {
+    text-align: start;
+
+    &:not(:first-child) {
+      text-align: end;
+    }
+  }
+
+  & th,
+  & td {
+    text-align: end;
+  }
+
+  & thead tr > * {
+    vertical-align: bottom;
+  }
+
+  & tbody tr > * {
+    vertical-align: baseline;
+  }
+
+  & tfoot tr > * {
+    vertical-align: top;
+  }
+
+  /* Backgrounds */
+  & thead th,
+  & tfoot th {
+    background-color: var(--bc-surf-dark);
+  }
+
+  & tbody th,
+  & tbody td {
+    background-color: var(--bc-surf-light);
+  }
+
+  /* Fixed first column with vertical line for the first row */
+  tr > th[scope="row"]:first-child,
+  tr > th[scope="col"]:first-child {
+    position: sticky;
+    inset-inline-start: 0;
+    border-inline-end: none;
+    z-index: 2;
+  }
+
+  tr > th[scope="row"]:first-child::after,
+  tr > th[scope="col"]:first-child::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--bc-brand);
+  }
+
+  td:first-of-type,
+  thead th:nth-child(2),
+  tfoot th:nth-child(2) {
+    border-inline-start: none;
+  }
+
+  /* Rounded corners */
+  thead th:first-child {
+    border-start-start-radius: var(--bc-radius);
+  }
+  thead th:last-child {
+    border-start-end-radius: var(--bc-radius);
+  }
+
+  tfoot th:first-child {
+    border-end-start-radius: var(--bc-radius);
+  }
+  tfoot th:last-child {
+    border-end-end-radius: var(--bc-radius);
+  }
+}
+
 /* Dialog */
 :where(dialog) {
   margin: auto;
