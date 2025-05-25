@@ -22,7 +22,7 @@
 :where(h1, h2, h3, h4, h5, h6) {
   line-height: 1rlh;
   font-weight: bolder;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.20rem;
   max-inline-size: var(--bc-max-width-short);
   font-family: var(--bc-font-header);
   text-wrap: balance;
@@ -123,7 +123,7 @@
 /* Blockquote */
 :where(blockquote) {
   border-color: var(--bc-brand);
-  background-color: var(--bc-surf-dark);
+  background-color: var(--bc-surf-light);
   border-radius: var(--bc-radius);
   box-shadow: var(--bc-shadow);
   font-size: var(--bc-font-size-small);
